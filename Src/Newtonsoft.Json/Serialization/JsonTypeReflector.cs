@@ -460,19 +460,25 @@ namespace Newtonsoft.Json.Serialization
                 if (_dynamicCodeGeneration == null)
                 {
 #if HAVE_CAS
-                    try
-                    {
-                        new ReflectionPermission(ReflectionPermissionFlag.MemberAccess).Demand();
-                        new ReflectionPermission(ReflectionPermissionFlag.RestrictedMemberAccess).Demand();
-                        new SecurityPermission(SecurityPermissionFlag.SkipVerification).Demand();
-                        new SecurityPermission(SecurityPermissionFlag.UnmanagedCode).Demand();
-                        new SecurityPermission(PermissionState.Unrestricted).Demand();
-                        _dynamicCodeGeneration = true;
-                    }
-                    catch (Exception)
-                    {
-                        _dynamicCodeGeneration = false;
-                    }
+                    // BEGIN [Altspace Deviation]: IL2CPP does not support dynamic code generation, but does not through an exception based on these
+                    // checks.  We need to shut off dynamic code generation altogether.
+                    _dynamicCodeGeneration = false;
+
+                    // try
+                    // {
+                    //     new ReflectionPermission(ReflectionPermissionFlag.MemberAccess).Demand();
+                    //     new ReflectionPermission(ReflectionPermissionFlag.RestrictedMemberAccess).Demand();
+                    //     new SecurityPermission(SecurityPermissionFlag.SkipVerification).Demand();
+                    //     new SecurityPermission(SecurityPermissionFlag.UnmanagedCode).Demand();
+                    //     new SecurityPermission(PermissionState.Unrestricted).Demand();
+                    //     _dynamicCodeGeneration = true;
+                    // }
+                    // catch (Exception)
+                    // {
+                    //     _dynamicCodeGeneration = false;
+                    // }
+
+                    // END [Altspace Deviation]
 #else
                     _dynamicCodeGeneration = false;
 #endif
