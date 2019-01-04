@@ -8,4 +8,4 @@ Altspace maintains a fork of the Newtonsoft.Json repo as the requirements of the
 
 # Building Newtonsoft.Json for Altspace
 
-You should utilize the `runbuild.ps1` script found within the `Build/` directory at the root of the repo.  This will run a build process that results in binaries being generated and placed in the `Src/Newtonsoft.Json/bin/Release/` directory.  We care about the `portable+net40+win8+wpa81+wp8+sl5` binary.  Rename the `.dll` and `.xml` files to be `Newtonsoft.Json.IL2CPP.(dll|xml)` and copy them in to the Altspace `Assets/Plugins` directory.  
+You should utilize the `runbuild.ps1` script found within the `Build/` directory at the root of the repo.  This will run a build process that results in binaries being generated and placed in the `Src/Newtonsoft.Json/bin/Release/` directory.  We care about the `portable+net40+win8+wpa81+wp8+sl5` binary.  Copy the `.dll` and `.xml` files in to the Altspace `Assets/Plugins` directory.  
