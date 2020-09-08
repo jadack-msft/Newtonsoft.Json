@@ -28,15 +28,15 @@ using System;
 #if DNXCORE50
 using Xunit;
 using Test = Xunit.FactAttribute;
-using Assert = Newtonsoft.Json.Tests.XUnitAssert;
+using Assert = NewtonsoftMRE.Json.Tests.XUnitAssert;
 #else
 using NUnit.Framework;
 #endif
-using Newtonsoft.Json.Schema;
+using NewtonsoftMRE.Json.Schema;
 using System.IO;
-using Newtonsoft.Json.Linq;
+using NewtonsoftMRE.Json.Linq;
 
-namespace Newtonsoft.Json.Tests.Schema
+namespace NewtonsoftMRE.Json.Tests.Schema
 {
     [TestFixture]
     public class JsonSchemaBuilderTests : TestFixtureBase

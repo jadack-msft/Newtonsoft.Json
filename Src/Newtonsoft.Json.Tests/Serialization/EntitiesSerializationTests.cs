@@ -24,23 +24,23 @@
 #endregion
 
 #if !(NET35 || NET20 || PORTABLE || DNXCORE50 || PORTABLE40)
-using Newtonsoft.Json.Serialization;
+using NewtonsoftMRE.Json.Serialization;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
-using Newtonsoft.Json.Converters;
+using NewtonsoftMRE.Json.Converters;
 #if DNXCORE50
 using Xunit;
 using Test = Xunit.FactAttribute;
-using Assert = Newtonsoft.Json.Tests.XUnitAssert;
+using Assert = NewtonsoftMRE.Json.Tests.XUnitAssert;
 #else
 using NUnit.Framework;
 
 #endif
 
-namespace Newtonsoft.Json.Tests.Serialization
+namespace NewtonsoftMRE.Json.Tests.Serialization
 {
     [TestFixture]
     public class EntitiesSerializationTests : TestFixtureBase

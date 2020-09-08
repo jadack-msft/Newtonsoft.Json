@@ -30,7 +30,7 @@ using System.Runtime.CompilerServices;
 #if DNXCORE50
 using Xunit;
 using Test = Xunit.FactAttribute;
-using Assert = Newtonsoft.Json.Tests.XUnitAssert;
+using Assert = NewtonsoftMRE.Json.Tests.XUnitAssert;
 #else
 using NUnit.Framework;
 #endif
@@ -38,9 +38,9 @@ using NUnit.Framework;
 using System.Dynamic;
 #endif
 using System.Runtime.Serialization;
-using Newtonsoft.Json.Tests.Linq;
+using NewtonsoftMRE.Json.Tests.Linq;
 
-namespace Newtonsoft.Json.Tests.Serialization
+namespace NewtonsoftMRE.Json.Tests.Serialization
 {
     [TestFixture]
     public class ReferenceLoopHandlingTests : TestFixtureBase
@@ -190,7 +190,7 @@ namespace Newtonsoft.Json.Tests.Serialization
             var settings =
                 new JsonSerializerSettings();
 
-            ExceptionAssert.Throws<JsonSerializationException>(() => JsonConvert.SerializeObject(main, settings), "Self referencing loop detected with type 'Newtonsoft.Json.Tests.Serialization.ReferenceLoopHandlingTests+MainClass'. Path 'Child'.");
+            ExceptionAssert.Throws<JsonSerializationException>(() => JsonConvert.SerializeObject(main, settings), "Self referencing loop detected with type 'NewtonsoftMRE.Json.Tests.Serialization.ReferenceLoopHandlingTests+MainClass'. Path 'Child'.");
         }
 
         [Test]
@@ -249,7 +249,7 @@ namespace Newtonsoft.Json.Tests.Serialization
 
             var settings = new JsonSerializerSettings();
 
-            ExceptionAssert.Throws<JsonSerializationException>(() => JsonConvert.SerializeObject(parent, settings), "Self referencing loop detected with type 'Newtonsoft.Json.Tests.Serialization.ReferenceLoopHandlingTests+DictionaryDynamicObject'. Path 'child'.");
+            ExceptionAssert.Throws<JsonSerializationException>(() => JsonConvert.SerializeObject(parent, settings), "Self referencing loop detected with type 'NewtonsoftMRE.Json.Tests.Serialization.ReferenceLoopHandlingTests+DictionaryDynamicObject'. Path 'child'.");
         }
 
         [Test]
@@ -284,7 +284,7 @@ namespace Newtonsoft.Json.Tests.Serialization
 
             ExceptionAssert.Throws<JsonSerializationException>(
                 () => JsonConvert.SerializeObject(account),
-                "Self referencing loop detected for property 'Manager' with type 'Newtonsoft.Json.Tests.Serialization.AccountWithEquals'. Path ''.");
+                "Self referencing loop detected for property 'Manager' with type 'NewtonsoftMRE.Json.Tests.Serialization.AccountWithEquals'. Path ''.");
 
             string json = JsonConvert.SerializeObject(account, new JsonSerializerSettings
             {

@@ -27,7 +27,7 @@
 
 using System;
 using System.Globalization;
-using Newtonsoft.Json.Linq;
+using NewtonsoftMRE.Json.Linq;
 #if !PORTABLE || NETSTANDARD1_3 || NETSTANDARD2_0
 using System.Numerics;
 #endif
@@ -35,7 +35,7 @@ using System.Text;
 #if DNXCORE50
 using Xunit;
 using Test = Xunit.FactAttribute;
-using Assert = Newtonsoft.Json.Tests.XUnitAssert;
+using Assert = NewtonsoftMRE.Json.Tests.XUnitAssert;
 #else
 using NUnit.Framework;
 #endif
@@ -45,10 +45,10 @@ using System.Net.Sockets;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Linq;
-using Newtonsoft.Json.Tests.TestObjects.JsonTextReaderTests;
-using Newtonsoft.Json.Utilities;
+using NewtonsoftMRE.Json.Tests.TestObjects.JsonTextReaderTests;
+using NewtonsoftMRE.Json.Utilities;
 
-namespace Newtonsoft.Json.Tests.JsonTextReaderTests
+namespace NewtonsoftMRE.Json.Tests.JsonTextReaderTests
 {
     [TestFixture]
 #if !DNXCORE50

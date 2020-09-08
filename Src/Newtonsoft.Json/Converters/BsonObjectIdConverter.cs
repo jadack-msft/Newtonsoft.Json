@@ -24,16 +24,16 @@
 #endregion
 
 using System;
-using Newtonsoft.Json.Bson;
+using NewtonsoftMRE.Json.Bson;
 using System.Globalization;
-using Newtonsoft.Json.Utilities;
+using NewtonsoftMRE.Json.Utilities;
 
-namespace Newtonsoft.Json.Converters
+namespace NewtonsoftMRE.Json.Converters
 {
     /// <summary>
     /// Converts a <see cref="BsonObjectId"/> to and from JSON and BSON.
     /// </summary>
-    [Obsolete("BSON reading and writing has been moved to its own package. See https://www.nuget.org/packages/Newtonsoft.Json.Bson for more details.")]
+    [Obsolete("BSON reading and writing has been moved to its own package. See https://www.nuget.org/packages/NewtonsoftMRE.Json.Bson for more details.")]
     public class BsonObjectIdConverter : JsonConverter
     {
         /// <summary>

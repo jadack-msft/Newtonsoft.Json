@@ -32,9 +32,9 @@ using System.Threading;
 using System.Numerics;
 #endif
 using System.Threading.Tasks;
-using Newtonsoft.Json.Utilities;
+using NewtonsoftMRE.Json.Utilities;
 
-namespace Newtonsoft.Json
+namespace NewtonsoftMRE.Json
 {
     public partial class JsonTextWriter
     {

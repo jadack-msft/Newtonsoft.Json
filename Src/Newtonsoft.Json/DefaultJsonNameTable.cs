@@ -25,7 +25,7 @@
 
 using System;
 
-namespace Newtonsoft.Json
+namespace NewtonsoftMRE.Json
 {
     /// <summary>
     /// The default JSON name table implementation.

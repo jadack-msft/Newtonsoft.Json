@@ -33,16 +33,16 @@ using System.Text;
 #if DNXCORE50
 using Xunit;
 using Test = Xunit.FactAttribute;
-using Assert = Newtonsoft.Json.Tests.XUnitAssert;
+using Assert = NewtonsoftMRE.Json.Tests.XUnitAssert;
 #else
 using NUnit.Framework;
 #endif
 #if !(NET20 || NET35 || DNXCORE50)
 using System.Runtime.Serialization.Json;
 #endif
-using Newtonsoft.Json.Serialization;
+using NewtonsoftMRE.Json.Serialization;
 
-namespace Newtonsoft.Json.Tests.Serialization
+namespace NewtonsoftMRE.Json.Tests.Serialization
 {
     [TestFixture]
     public class WebApiIntegrationTests : TestFixtureBase

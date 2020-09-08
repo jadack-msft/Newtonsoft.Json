@@ -25,8 +25,8 @@
 
 #if !(NET40 || NET35 || NET20 || DNXCORE50 || PORTABLE || PORTABLE40) || NETSTANDARD1_0 || NETSTANDARD1_3 || NETSTANDARD2_0
 using Autofac;
-using Newtonsoft.Json.Serialization;
-using Newtonsoft.Json.Tests.TestObjects;
+using NewtonsoftMRE.Json.Serialization;
+using NewtonsoftMRE.Json.Tests.TestObjects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -36,17 +36,17 @@ using System.Threading.Tasks;
 using Autofac.Core;
 using Autofac.Core.Activators.Reflection;
 using Microsoft.FSharp.Collections;
-using Newtonsoft.Json.Tests.TestObjects.Organization;
+using NewtonsoftMRE.Json.Tests.TestObjects.Organization;
 #if DNXCORE50
 using Xunit;
 using Test = Xunit.FactAttribute;
-using Assert = Newtonsoft.Json.Tests.XUnitAssert;
+using Assert = NewtonsoftMRE.Json.Tests.XUnitAssert;
 #else
 using NUnit.Framework;
 
 #endif
 
-namespace Newtonsoft.Json.Tests.Serialization
+namespace NewtonsoftMRE.Json.Tests.Serialization
 {
     public interface IBase
     {

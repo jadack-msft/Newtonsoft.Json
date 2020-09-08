@@ -2,11 +2,11 @@
 using System.Globalization;
 using System.Runtime.InteropServices;
 using System.Runtime.Serialization;
-using Newtonsoft.Json.Utilities;
+using NewtonsoftMRE.Json.Utilities;
 
 #if HAVE_BINARY_SERIALIZATION && !HAVE_BINARY_FORMATTER
 
-namespace Newtonsoft.Json.Serialization
+namespace NewtonsoftMRE.Json.Serialization
 {
     internal class FormatterConverter : IFormatterConverter
     {

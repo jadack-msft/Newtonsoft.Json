@@ -30,9 +30,9 @@ using System.Globalization;
 #if HAVE_BIG_INTEGER
 using System.Numerics;
 #endif
-using Newtonsoft.Json.Utilities;
+using NewtonsoftMRE.Json.Utilities;
 
-namespace Newtonsoft.Json
+namespace NewtonsoftMRE.Json
 {
     internal enum ReadType
     {

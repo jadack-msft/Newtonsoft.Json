@@ -25,9 +25,9 @@
 
 using System;
 using System.Globalization;
-using Newtonsoft.Json.Utilities;
+using NewtonsoftMRE.Json.Utilities;
 
-namespace Newtonsoft.Json.Converters
+namespace NewtonsoftMRE.Json.Converters
 {
     /// <summary>
     /// Converts a <see cref="DateTime"/> to and from Unix epoch time

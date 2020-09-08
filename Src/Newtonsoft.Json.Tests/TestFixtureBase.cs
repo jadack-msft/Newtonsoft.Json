@@ -30,7 +30,7 @@ using System.IO;
 using System.Reflection;
 using System.Text.RegularExpressions;
 #if (NET20 || NET35)
-using Newtonsoft.Json.Serialization;
+using NewtonsoftMRE.Json.Serialization;
 #else
 using System.Runtime.Serialization.Json;
 #endif
@@ -38,25 +38,25 @@ using System.Text;
 using System.Threading;
 #if DNXCORE50
 using Xunit;
-using Assert = Newtonsoft.Json.Tests.XUnitAssert;
+using Assert = NewtonsoftMRE.Json.Tests.XUnitAssert;
 using XAssert = Xunit.Assert;
 #else
 using NUnit.Framework;
 #endif
-using Newtonsoft.Json.Utilities;
+using NewtonsoftMRE.Json.Utilities;
 using System.Collections;
 #if !(NET20 || NET35 || NET40 || PORTABLE40)
 using System.Threading.Tasks;
 #endif
 #if NET20
-using Newtonsoft.Json.Utilities.LinqBridge;
-using Action = Newtonsoft.Json.Serialization.Action;
+using NewtonsoftMRE.Json.Utilities.LinqBridge;
+using Action = NewtonsoftMRE.Json.Serialization.Action;
 #else
 using System.Linq;
 
 #endif
 
-namespace Newtonsoft.Json.Tests
+namespace NewtonsoftMRE.Json.Tests
 {
     public class TestReflectionUtils
     {

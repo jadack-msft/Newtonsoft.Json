@@ -28,17 +28,17 @@ using System.IO;
 #if !(PORTABLE || DNXCORE50) || NETSTANDARD2_0
 using System.Runtime.Serialization.Formatters.Binary;
 #endif
-using Newtonsoft.Json.Schema;
+using NewtonsoftMRE.Json.Schema;
 #if DNXCORE50
 using Xunit;
 using Test = Xunit.FactAttribute;
-using Assert = Newtonsoft.Json.Tests.XUnitAssert;
+using Assert = NewtonsoftMRE.Json.Tests.XUnitAssert;
 #else
 using NUnit.Framework;
 
 #endif
 
-namespace Newtonsoft.Json.Tests
+namespace NewtonsoftMRE.Json.Tests
 {
     [TestFixture]
     public class ExceptionTests : TestFixtureBase
@@ -47,7 +47,7 @@ namespace Newtonsoft.Json.Tests
         public void JsonSerializationException()
         {
             JsonSerializationException exception = new JsonSerializationException();
-            Assert.AreEqual("Exception of type 'Newtonsoft.Json.JsonSerializationException' was thrown.", exception.Message);
+            Assert.AreEqual("Exception of type 'NewtonsoftMRE.Json.JsonSerializationException' was thrown.", exception.Message);
 
             exception = new JsonSerializationException("Message!");
             Assert.AreEqual("Message!", exception.Message);
@@ -62,7 +62,7 @@ namespace Newtonsoft.Json.Tests
         public void JsonWriterException()
         {
             JsonWriterException exception = new JsonWriterException();
-            Assert.AreEqual("Exception of type 'Newtonsoft.Json.JsonWriterException' was thrown.", exception.Message);
+            Assert.AreEqual("Exception of type 'NewtonsoftMRE.Json.JsonWriterException' was thrown.", exception.Message);
 
             exception = new JsonWriterException("Message!");
             Assert.AreEqual("Message!", exception.Message);
@@ -77,7 +77,7 @@ namespace Newtonsoft.Json.Tests
         public void JsonReaderException()
         {
             JsonReaderException exception = new JsonReaderException();
-            Assert.AreEqual("Exception of type 'Newtonsoft.Json.JsonReaderException' was thrown.", exception.Message);
+            Assert.AreEqual("Exception of type 'NewtonsoftMRE.Json.JsonReaderException' was thrown.", exception.Message);
 
             exception = new JsonReaderException("Message!");
             Assert.AreEqual("Message!", exception.Message);
@@ -93,7 +93,7 @@ namespace Newtonsoft.Json.Tests
         public void JsonSchemaException()
         {
             JsonSchemaException exception = new JsonSchemaException();
-            Assert.AreEqual("Exception of type 'Newtonsoft.Json.Schema.JsonSchemaException' was thrown.", exception.Message);
+            Assert.AreEqual("Exception of type 'NewtonsoftMRE.Json.Schema.JsonSchemaException' was thrown.", exception.Message);
 
             exception = new JsonSchemaException("Message!");
             Assert.AreEqual("Message!", exception.Message);

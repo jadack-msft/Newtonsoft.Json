@@ -30,13 +30,13 @@ using System.Diagnostics;
 using System.Globalization;
 using System.IO;
 using System.Runtime.Serialization.Formatters;
-using Newtonsoft.Json.Converters;
-using Newtonsoft.Json.Serialization;
-using Newtonsoft.Json.Utilities;
+using NewtonsoftMRE.Json.Converters;
+using NewtonsoftMRE.Json.Serialization;
+using NewtonsoftMRE.Json.Utilities;
 using System.Runtime.Serialization;
-using ErrorEventArgs = Newtonsoft.Json.Serialization.ErrorEventArgs;
+using ErrorEventArgs = NewtonsoftMRE.Json.Serialization.ErrorEventArgs;
 
-namespace Newtonsoft.Json
+namespace NewtonsoftMRE.Json
 {
     /// <summary>
     /// Serializes and deserializes objects into and from the JSON format.

@@ -23,19 +23,19 @@
 // OTHER DEALINGS IN THE SOFTWARE.
 #endregion
 
-using Newtonsoft.Json.Linq;
+using NewtonsoftMRE.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Text;
 #if DNXCORE50
 using Xunit;
 using Test = Xunit.FactAttribute;
-using Assert = Newtonsoft.Json.Tests.XUnitAssert;
+using Assert = NewtonsoftMRE.Json.Tests.XUnitAssert;
 #else
 using NUnit.Framework;
 #endif
 
-namespace Newtonsoft.Json.Tests.Documentation.Samples.Serializer
+namespace NewtonsoftMRE.Json.Tests.Documentation.Samples.Serializer
 {
     [TestFixture]
     public class CustomJsonConverterGeneric : TestFixtureBase
@@ -69,7 +69,7 @@ namespace Newtonsoft.Json.Tests.Documentation.Samples.Serializer
             #region Usage
             NuGetPackage p1 = new NuGetPackage
             {
-                PackageId = "Newtonsoft.Json",
+                PackageId = "NewtonsoftMRE.Json",
                 Version = new Version(10, 0, 4)
             };
 
@@ -77,7 +77,7 @@ namespace Newtonsoft.Json.Tests.Documentation.Samples.Serializer
 
             Console.WriteLine(json);
             // {
-            //   "PackageId": "Newtonsoft.Json",
+            //   "PackageId": "NewtonsoftMRE.Json",
             //   "Version": "10.0.4"
             // }
 

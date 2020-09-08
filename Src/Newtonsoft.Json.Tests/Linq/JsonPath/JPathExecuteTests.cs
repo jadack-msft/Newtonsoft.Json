@@ -29,25 +29,25 @@ using System.Text;
 #if !(PORTABLE || PORTABLE40 || NET35 || NET20) || NETSTANDARD1_3 || NETSTANDARD2_0
 using System.Numerics;
 #endif
-using Newtonsoft.Json.Linq.JsonPath;
-using Newtonsoft.Json.Tests.Bson;
+using NewtonsoftMRE.Json.Linq.JsonPath;
+using NewtonsoftMRE.Json.Tests.Bson;
 #if DNXCORE50
 using Xunit;
 using Test = Xunit.FactAttribute;
-using Assert = Newtonsoft.Json.Tests.XUnitAssert;
+using Assert = NewtonsoftMRE.Json.Tests.XUnitAssert;
 using TestCaseSource = Xunit.MemberDataAttribute;
 #else
 using NUnit.Framework;
 #endif
-using Newtonsoft.Json.Linq;
+using NewtonsoftMRE.Json.Linq;
 #if NET20
-using Newtonsoft.Json.Utilities.LinqBridge;
+using NewtonsoftMRE.Json.Utilities.LinqBridge;
 #else
 using System.Linq;
 
 #endif
 
-namespace Newtonsoft.Json.Tests.Linq.JsonPath
+namespace NewtonsoftMRE.Json.Tests.Linq.JsonPath
 {
     [TestFixture]
     public class JPathExecuteTests : TestFixtureBase

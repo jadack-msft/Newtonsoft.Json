@@ -29,16 +29,16 @@ using System.IO;
 #if HAVE_BIG_INTEGER
 using System.Numerics;
 #endif
-using Newtonsoft.Json.Utilities;
+using NewtonsoftMRE.Json.Utilities;
 using System.Globalization;
 #if !HAVE_LINQ
-using Newtonsoft.Json.Utilities.LinqBridge;
+using NewtonsoftMRE.Json.Utilities.LinqBridge;
 #else
 using System.Linq;
 
 #endif
 
-namespace Newtonsoft.Json
+namespace NewtonsoftMRE.Json
 {
     /// <summary>
     /// Represents a writer that provides a fast, non-cached, forward-only way of generating JSON data.
@@ -1647,7 +1647,7 @@ namespace Newtonsoft.Json
                         }
 #endif
 
-                        // write an unknown null value, fix https://github.com/JamesNK/Newtonsoft.Json/issues/1460
+                        // write an unknown null value, fix https://github.com/JamesNK/NewtonsoftMRE.Json/issues/1460
                         if (value == null)
                         {
                             writer.WriteNull();

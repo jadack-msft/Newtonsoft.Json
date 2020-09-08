@@ -27,20 +27,20 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
-using Newtonsoft.Json.Linq;
-using Newtonsoft.Json.Tests.TestObjects;
-using Newtonsoft.Json.Tests.TestObjects.Organization;
-using Newtonsoft.Json.Serialization;
+using NewtonsoftMRE.Json.Linq;
+using NewtonsoftMRE.Json.Tests.TestObjects;
+using NewtonsoftMRE.Json.Tests.TestObjects.Organization;
+using NewtonsoftMRE.Json.Serialization;
 #if DNXCORE50
 using Xunit;
 using Test = Xunit.FactAttribute;
-using Assert = Newtonsoft.Json.Tests.XUnitAssert;
+using Assert = NewtonsoftMRE.Json.Tests.XUnitAssert;
 #else
 using NUnit.Framework;
 
 #endif
 
-namespace Newtonsoft.Json.Tests.Serialization
+namespace NewtonsoftMRE.Json.Tests.Serialization
 {
     [TestFixture]
     public class ExtensionDataTests : TestFixtureBase
@@ -481,9 +481,9 @@ namespace Newtonsoft.Json.Tests.Serialization
 
             string json = JsonConvert.SerializeObject(c, new JsonSerializerSettings
             {
-                ContractResolver = new Newtonsoft.Json.Serialization.DefaultContractResolver
+                ContractResolver = new NewtonsoftMRE.Json.Serialization.DefaultContractResolver
                 {
-                    NamingStrategy = new Newtonsoft.Json.Serialization.CamelCaseNamingStrategy()
+                    NamingStrategy = new NewtonsoftMRE.Json.Serialization.CamelCaseNamingStrategy()
                 },
                 Formatting = Formatting.Indented
             });
@@ -769,7 +769,7 @@ namespace Newtonsoft.Json.Tests.Serialization
   ""Name"": ""Name!"",
   ""Test"": 1,
   ""Self"": {
-    ""$type"": ""Newtonsoft.Json.Tests.TestObjects.Organization.WagePerson, Newtonsoft.Json.Tests"",
+    ""$type"": ""NewtonsoftMRE.Json.Tests.TestObjects.Organization.WagePerson, NewtonsoftMRE.Json.Tests"",
     ""HourlyWage"": 2.0,
     ""Name"": null,
     ""BirthDate"": ""0001-01-01T00:00:00"",
@@ -797,7 +797,7 @@ namespace Newtonsoft.Json.Tests.Serialization
   ""Name"": ""Name!"",
   ""Test"": 1,
   ""Self"": {
-    ""$type"": ""Newtonsoft.Json.Tests.TestObjects.Organization.WagePerson, Newtonsoft.Json.Tests"",
+    ""$type"": ""NewtonsoftMRE.Json.Tests.TestObjects.Organization.WagePerson, NewtonsoftMRE.Json.Tests"",
     ""HourlyWage"": 2.0,
     ""Name"": null,
     ""BirthDate"": ""0001-01-01T00:00:00"",
@@ -841,10 +841,10 @@ namespace Newtonsoft.Json.Tests.Serialization
             });
 
             StringAssert.AreEqual(@"{
-  ""$type"": ""Newtonsoft.Json.Tests.Serialization.ExtensionDataTests+PublicExtensionDataAttributeTestClass, Newtonsoft.Json.Tests"",
+  ""$type"": ""NewtonsoftMRE.Json.Tests.Serialization.ExtensionDataTests+PublicExtensionDataAttributeTestClass, NewtonsoftMRE.Json.Tests"",
   ""Name"": ""Name!"",
   ""Test"": {
-    ""$type"": ""Newtonsoft.Json.Tests.TestObjects.Organization.WagePerson, Newtonsoft.Json.Tests"",
+    ""$type"": ""NewtonsoftMRE.Json.Tests.TestObjects.Organization.WagePerson, NewtonsoftMRE.Json.Tests"",
     ""HourlyWage"": 2.1,
     ""Name"": null,
     ""BirthDate"": ""0001-01-01T00:00:00"",
@@ -1003,7 +1003,7 @@ namespace Newtonsoft.Json.Tests.Serialization
             }
             catch (JsonSerializationException ex)
             {
-                Assert.AreEqual("Error setting value in extension data for type 'Newtonsoft.Json.Tests.Serialization.ExtensionDataTests+DocNoSetter'. Path 'Property1', line 1, position 39.", ex.Message);
+                Assert.AreEqual("Error setting value in extension data for type 'NewtonsoftMRE.Json.Tests.Serialization.ExtensionDataTests+DocNoSetter'. Path 'Property1', line 1, position 39.", ex.Message);
                 Assert.AreEqual("Cannot set value onto extension data member 'Content'. The extension data collection is null and it cannot be set.", ex.InnerException.Message);
             }
         }
@@ -1022,7 +1022,7 @@ namespace Newtonsoft.Json.Tests.Serialization
         {
             ExceptionAssert.Throws<JsonException>(
                 () => { JsonConvert.SerializeObject(new DocNoGetter()); },
-                "Invalid extension data attribute on 'Newtonsoft.Json.Tests.Serialization.ExtensionDataTests+DocNoGetter'. Member 'Content' must have a getter.");
+                "Invalid extension data attribute on 'NewtonsoftMRE.Json.Tests.Serialization.ExtensionDataTests+DocNoGetter'. Member 'Content' must have a getter.");
         }
 
         public class Item

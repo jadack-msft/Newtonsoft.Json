@@ -27,17 +27,17 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
-using Newtonsoft.Json.Bson;
+using NewtonsoftMRE.Json.Bson;
 #if DNXCORE50
 using Xunit;
 using Test = Xunit.FactAttribute;
-using Assert = Newtonsoft.Json.Tests.XUnitAssert;
+using Assert = NewtonsoftMRE.Json.Tests.XUnitAssert;
 #else
 using NUnit.Framework;
 
 #endif
 
-namespace Newtonsoft.Json.Tests.Documentation.Samples.Bson
+namespace NewtonsoftMRE.Json.Tests.Documentation.Samples.Bson
 {
     [TestFixture]
     public class DeserializeFromBson : TestFixtureBase

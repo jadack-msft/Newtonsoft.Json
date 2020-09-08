@@ -29,15 +29,15 @@ using System.Diagnostics;
 using System.Globalization;
 using System.Runtime.Serialization;
 #if !HAVE_LINQ
-using Newtonsoft.Json.Utilities.LinqBridge;
+using NewtonsoftMRE.Json.Utilities.LinqBridge;
 #else
 using System.Linq;
 #endif
 using System.Reflection;
 using System.Text;
-using Newtonsoft.Json.Serialization;
+using NewtonsoftMRE.Json.Serialization;
 
-namespace Newtonsoft.Json.Utilities
+namespace NewtonsoftMRE.Json.Utilities
 {
     internal static class EnumUtils
     {
@@ -117,7 +117,7 @@ namespace Newtonsoft.Json.Utilities
             return selectedFlagsValues;
         }
 
-        // Used by Newtonsoft.Json.Schema
+        // Used by NewtonsoftMRE.Json.Schema
         private static CamelCaseNamingStrategy _camelCaseNamingStrategy = new CamelCaseNamingStrategy();
         public static bool TryToString(Type enumType, object value, bool camelCase, out string name)
         {

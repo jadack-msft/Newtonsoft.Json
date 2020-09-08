@@ -27,12 +27,12 @@ using System;
 using System.Collections.Generic;
 using System.Reflection;
 #if !HAVE_LINQ
-using Newtonsoft.Json.Utilities.LinqBridge;
+using NewtonsoftMRE.Json.Utilities.LinqBridge;
 #else
 using System.Linq;
 #endif
 
-namespace Newtonsoft.Json.Utilities
+namespace NewtonsoftMRE.Json.Utilities
 {
     internal static class TypeExtensions
     {

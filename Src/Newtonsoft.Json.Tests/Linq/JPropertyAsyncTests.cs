@@ -25,18 +25,18 @@
 
 #if !(NET20 || NET35 || NET40 || PORTABLE40)
 
-using Newtonsoft.Json.Linq;
+using NewtonsoftMRE.Json.Linq;
 #if DNXCORE50
 using Xunit;
 using Test = Xunit.FactAttribute;
-using Assert = Newtonsoft.Json.Tests.XUnitAssert;
+using Assert = NewtonsoftMRE.Json.Tests.XUnitAssert;
 #else
 using NUnit.Framework;
 #endif
 using System.IO;
 using System.Threading.Tasks;
 
-namespace Newtonsoft.Json.Tests.Linq
+namespace NewtonsoftMRE.Json.Tests.Linq
 {
     [TestFixture]
     public class JPropertyAsyncTests : TestFixtureBase

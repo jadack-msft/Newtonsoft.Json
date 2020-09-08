@@ -32,17 +32,17 @@ using System.Reflection;
 #if DNXCORE50
 using Xunit;
 using Test = Xunit.FactAttribute;
-using Assert = Newtonsoft.Json.Tests.XUnitAssert;
+using Assert = NewtonsoftMRE.Json.Tests.XUnitAssert;
 #else
 using NUnit.Framework;
 #endif
-using Newtonsoft.Json.Serialization;
-using Newtonsoft.Json.Utilities;
-using Newtonsoft.Json.Tests.TestObjects;
-using Newtonsoft.Json.Tests.TestObjects.Organization;
-using Newtonsoft.Json.Tests.Serialization;
+using NewtonsoftMRE.Json.Serialization;
+using NewtonsoftMRE.Json.Utilities;
+using NewtonsoftMRE.Json.Tests.TestObjects;
+using NewtonsoftMRE.Json.Tests.TestObjects.Organization;
+using NewtonsoftMRE.Json.Tests.Serialization;
 
-namespace Newtonsoft.Json.Tests.Utilities
+namespace NewtonsoftMRE.Json.Tests.Utilities
 {
     [TestFixture]
     public class ExpressionReflectionDelegateFactoryTests : TestFixtureBase
@@ -181,7 +181,7 @@ namespace Newtonsoft.Json.Tests.Utilities
 
             Movie m = new Movie();
             object result = method(m);
-            Assert.AreEqual("Newtonsoft.Json.Tests.TestObjects.Movie", result);
+            Assert.AreEqual("NewtonsoftMRE.Json.Tests.TestObjects.Movie", result);
 
             method = ExpressionReflectionDelegateFactory.Instance.CreateMethodCall<object>(TestReflectionUtils.GetMethod(typeof(Movie), "Equals"));
 
@@ -322,7 +322,7 @@ namespace Newtonsoft.Json.Tests.Utilities
                 },
                 new[]
                 {
-                    "Unable to cast object of type 'Newtonsoft.Json.Tests.TestObjects.Organization.Person' to type 'Newtonsoft.Json.Tests.TestObjects.Movie'.",
+                    "Unable to cast object of type 'NewtonsoftMRE.Json.Tests.TestObjects.Organization.Person' to type 'NewtonsoftMRE.Json.Tests.TestObjects.Movie'.",
                     "Cannot cast from source type to destination type." // mono
                 });
         }
@@ -348,7 +348,7 @@ namespace Newtonsoft.Json.Tests.Utilities
                 },
                 new[]
                 {
-                    "Unable to cast object of type 'Newtonsoft.Json.Tests.TestObjects.Organization.Person' to type 'Newtonsoft.Json.Tests.TestObjects.Movie'.",
+                    "Unable to cast object of type 'NewtonsoftMRE.Json.Tests.TestObjects.Organization.Person' to type 'NewtonsoftMRE.Json.Tests.TestObjects.Movie'.",
                     "Cannot cast from source type to destination type." // mono
                 });
         }

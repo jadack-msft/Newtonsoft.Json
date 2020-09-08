@@ -25,7 +25,7 @@
 
 using System;
 
-namespace Newtonsoft.Json.Schema
+namespace NewtonsoftMRE.Json.Schema
 {
     /// <summary>
     /// <para>

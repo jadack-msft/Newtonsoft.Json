@@ -29,8 +29,8 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Reflection;
 using System.Runtime.Serialization;
-using Newtonsoft.Json.Serialization;
-using Newtonsoft.Json.Tests.TestObjects;
+using NewtonsoftMRE.Json.Serialization;
+using NewtonsoftMRE.Json.Tests.TestObjects;
 #if !(NET20 || NET35 || PORTABLE) || NETSTANDARD1_3 || NETSTANDARD2_0
 using System.Numerics;
 #endif
@@ -39,17 +39,17 @@ using System.Text.RegularExpressions;
 #if DNXCORE50
 using Xunit;
 using Test = Xunit.FactAttribute;
-using Assert = Newtonsoft.Json.Tests.XUnitAssert;
+using Assert = NewtonsoftMRE.Json.Tests.XUnitAssert;
 #else
 using NUnit.Framework;
 #endif
-using Newtonsoft.Json.Bson;
+using NewtonsoftMRE.Json.Bson;
 using System.IO;
-using Newtonsoft.Json.Tests.Serialization;
-using Newtonsoft.Json.Utilities;
-using Newtonsoft.Json.Linq;
+using NewtonsoftMRE.Json.Tests.Serialization;
+using NewtonsoftMRE.Json.Utilities;
+using NewtonsoftMRE.Json.Linq;
 
-namespace Newtonsoft.Json.Tests.Bson
+namespace NewtonsoftMRE.Json.Tests.Bson
 {
     [TestFixture]
     public class BsonReaderTests : TestFixtureBase

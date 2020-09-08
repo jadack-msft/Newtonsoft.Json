@@ -31,20 +31,20 @@ using System.Text;
 #if DNXCORE50
 using Xunit;
 using Test = Xunit.FactAttribute;
-using Assert = Newtonsoft.Json.Tests.XUnitAssert;
+using Assert = NewtonsoftMRE.Json.Tests.XUnitAssert;
 #else
 using NUnit.Framework;
 #endif
 using System.Runtime.Serialization;
-using Newtonsoft.Json.Linq;
-using Newtonsoft.Json.Serialization;
+using NewtonsoftMRE.Json.Linq;
+using NewtonsoftMRE.Json.Serialization;
 using Autofac;
 using Autofac.Core;
 using Autofac.Core.Activators.Reflection;
-using Newtonsoft.Json.Tests.Serialization;
-using LogService = Newtonsoft.Json.Tests.Serialization.LogManager;
+using NewtonsoftMRE.Json.Tests.Serialization;
+using LogService = NewtonsoftMRE.Json.Tests.Serialization.LogManager;
 
-namespace Newtonsoft.Json.Tests.Documentation.Samples.Serializer
+namespace NewtonsoftMRE.Json.Tests.Documentation.Samples.Serializer
 {
     [TestFixture]
     public class DeserializeWithDependencyInjection : TestFixtureBase

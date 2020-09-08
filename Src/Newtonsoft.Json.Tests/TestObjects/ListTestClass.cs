@@ -25,7 +25,7 @@
 
 using System.Collections.Generic;
 
-namespace Newtonsoft.Json.Tests.TestObjects
+namespace NewtonsoftMRE.Json.Tests.TestObjects
 {
     [JsonObject(MemberSerialization.OptIn)]
     public class ListTestClass

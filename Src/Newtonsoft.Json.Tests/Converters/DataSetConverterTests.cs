@@ -25,20 +25,20 @@
 
 #if !(PORTABLE || DNXCORE50 || PORTABLE40) || NETSTANDARD2_0
 using System;
-using Newtonsoft.Json.Converters;
+using NewtonsoftMRE.Json.Converters;
 #if DNXCORE50
 using Xunit;
 using Test = Xunit.FactAttribute;
-using Assert = Newtonsoft.Json.Tests.XUnitAssert;
+using Assert = NewtonsoftMRE.Json.Tests.XUnitAssert;
 #else
 using NUnit.Framework;
 #endif
-using Newtonsoft.Json.Serialization;
-using Newtonsoft.Json.Tests.TestObjects;
+using NewtonsoftMRE.Json.Serialization;
+using NewtonsoftMRE.Json.Tests.TestObjects;
 using System.Data;
 using System.IO;
 
-namespace Newtonsoft.Json.Tests.Converters
+namespace NewtonsoftMRE.Json.Tests.Converters
 {
     public class DataSetConverterTests : TestFixtureBase
     {

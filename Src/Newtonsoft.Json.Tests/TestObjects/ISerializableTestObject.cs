@@ -25,9 +25,9 @@
 
 using System;
 using System.Runtime.Serialization;
-using Newtonsoft.Json.Tests.TestObjects.Organization;
+using NewtonsoftMRE.Json.Tests.TestObjects.Organization;
 
-namespace Newtonsoft.Json.Tests.TestObjects
+namespace NewtonsoftMRE.Json.Tests.TestObjects
 {
     [Serializable]
     public class ISerializableTestObject : ISerializable

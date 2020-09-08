@@ -29,17 +29,17 @@ using System.Collections.Generic;
 using System.Dynamic;
 using System.Linq;
 using System.Text;
-using Newtonsoft.Json.Converters;
+using NewtonsoftMRE.Json.Converters;
 #if DNXCORE50
 using Xunit;
 using Test = Xunit.FactAttribute;
-using Assert = Newtonsoft.Json.Tests.XUnitAssert;
+using Assert = NewtonsoftMRE.Json.Tests.XUnitAssert;
 #else
 using NUnit.Framework;
 
 #endif
 
-namespace Newtonsoft.Json.Tests.Converters
+namespace NewtonsoftMRE.Json.Tests.Converters
 {
     [TestFixture]
     public class ExpandoObjectConverterTests : TestFixtureBase

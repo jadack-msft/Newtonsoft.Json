@@ -25,9 +25,9 @@
 
 using System.Collections.Generic;
 using System.Runtime.Serialization;
-using Newtonsoft.Json.Linq;
+using NewtonsoftMRE.Json.Linq;
 
-namespace Newtonsoft.Json.Tests.TestObjects
+namespace NewtonsoftMRE.Json.Tests.TestObjects
 {
     public class DirectoryAccount
     {

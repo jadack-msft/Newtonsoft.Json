@@ -26,9 +26,9 @@
 using System;
 using System.Collections.Generic;
 using System.Globalization;
-using Newtonsoft.Json.Utilities;
+using NewtonsoftMRE.Json.Utilities;
 
-namespace Newtonsoft.Json.Serialization
+namespace NewtonsoftMRE.Json.Serialization
 {
     /// <summary>
     /// Resolves member mappings for a type, camel casing property names.

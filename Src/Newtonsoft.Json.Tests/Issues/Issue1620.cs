@@ -33,23 +33,23 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.Serialization;
-using Newtonsoft.Json.Linq;
-using Newtonsoft.Json.Serialization;
-using Newtonsoft.Json.Utilities;
+using NewtonsoftMRE.Json.Linq;
+using NewtonsoftMRE.Json.Serialization;
+using NewtonsoftMRE.Json.Utilities;
 #if PORTABLE && !NETSTANDARD2_0
-using BindingFlags = Newtonsoft.Json.Utilities.BindingFlags;
+using BindingFlags = NewtonsoftMRE.Json.Utilities.BindingFlags;
 #else
 using BindingFlags = System.Reflection.BindingFlags;
 #endif
 #if DNXCORE50
 using Xunit;
 using Test = Xunit.FactAttribute;
-using Assert = Newtonsoft.Json.Tests.XUnitAssert;
+using Assert = NewtonsoftMRE.Json.Tests.XUnitAssert;
 #else
 using NUnit.Framework;
 #endif
 
-namespace Newtonsoft.Json.Tests.Issues
+namespace NewtonsoftMRE.Json.Tests.Issues
 {
     [TestFixture]
     public class Issue1620 : TestFixtureBase

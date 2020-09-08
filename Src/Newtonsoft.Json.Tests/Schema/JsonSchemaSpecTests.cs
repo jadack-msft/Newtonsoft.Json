@@ -28,24 +28,24 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 #if NET20
-using Newtonsoft.Json.Utilities.LinqBridge;
+using NewtonsoftMRE.Json.Utilities.LinqBridge;
 #else
 using System.Linq;
 #endif
 using System.Reflection;
 using System.Text;
-using Newtonsoft.Json.Linq;
-using Newtonsoft.Json.Schema;
+using NewtonsoftMRE.Json.Linq;
+using NewtonsoftMRE.Json.Schema;
 #if DNXCORE50
 using Xunit;
 using Test = Xunit.FactAttribute;
-using Assert = Newtonsoft.Json.Tests.XUnitAssert;
+using Assert = NewtonsoftMRE.Json.Tests.XUnitAssert;
 using TestCaseSource = Xunit.MemberDataAttribute;
 #else
 using NUnit.Framework;
 #endif
 
-namespace Newtonsoft.Json.Tests.Schema
+namespace NewtonsoftMRE.Json.Tests.Schema
 {
     public class JsonSchemaSpecTest
     {

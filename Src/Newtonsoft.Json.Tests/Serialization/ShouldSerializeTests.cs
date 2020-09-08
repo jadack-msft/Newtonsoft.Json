@@ -28,24 +28,24 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 #if NET20
-using Newtonsoft.Json.Utilities.LinqBridge;
+using NewtonsoftMRE.Json.Utilities.LinqBridge;
 #else
 using System.Linq;
 #endif
 using System.Reflection;
 using System.Text;
-using Newtonsoft.Json.Linq;
-using Newtonsoft.Json.Serialization;
+using NewtonsoftMRE.Json.Linq;
+using NewtonsoftMRE.Json.Serialization;
 #if DNXCORE50
 using Xunit;
 using Test = Xunit.FactAttribute;
-using Assert = Newtonsoft.Json.Tests.XUnitAssert;
+using Assert = NewtonsoftMRE.Json.Tests.XUnitAssert;
 #else
 using NUnit.Framework;
 
 #endif
 
-namespace Newtonsoft.Json.Tests.Serialization
+namespace NewtonsoftMRE.Json.Tests.Serialization
 {
     [TestFixture]
     public class ShouldSerializeTests : TestFixtureBase
@@ -414,7 +414,7 @@ namespace Newtonsoft.Json.Tests.Serialization
             Assert.AreEqual(true, c.HasName);
             Assert.AreEqual("Name!", c.Name);
 
-            Assert.IsTrue(traceWriter.GetTraceMessages().Any(m => m.EndsWith("Verbose ShouldDeserialize result for property 'Name' on Newtonsoft.Json.Tests.Serialization.ShouldDeserializeTestClass: True. Path 'Name'.")));
+            Assert.IsTrue(traceWriter.GetTraceMessages().Any(m => m.EndsWith("Verbose ShouldDeserialize result for property 'Name' on NewtonsoftMRE.Json.Tests.Serialization.ShouldDeserializeTestClass: True. Path 'Name'.")));
         }
 
         [Test]
@@ -434,7 +434,7 @@ namespace Newtonsoft.Json.Tests.Serialization
             Assert.AreEqual(false, c.HasName);
             Assert.AreEqual(null, c.Name);
 
-            Assert.IsTrue(traceWriter.GetTraceMessages().Any(m => m.EndsWith("Verbose ShouldDeserialize result for property 'Name' on Newtonsoft.Json.Tests.Serialization.ShouldDeserializeTestClass: False. Path 'Name'.")));
+            Assert.IsTrue(traceWriter.GetTraceMessages().Any(m => m.EndsWith("Verbose ShouldDeserialize result for property 'Name' on NewtonsoftMRE.Json.Tests.Serialization.ShouldDeserializeTestClass: False. Path 'Name'.")));
         }
 
         public class Employee

@@ -23,11 +23,11 @@
 // OTHER DEALINGS IN THE SOFTWARE.
 #endregion
 
-using Newtonsoft.Json.Serialization;
+using NewtonsoftMRE.Json.Serialization;
 #if DNXCORE50
 using Xunit;
 using Test = Xunit.FactAttribute;
-using Assert = Newtonsoft.Json.Tests.XUnitAssert;
+using Assert = NewtonsoftMRE.Json.Tests.XUnitAssert;
 #else
 using NUnit.Framework;
 #endif
@@ -35,9 +35,9 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
-using User = Newtonsoft.Json.Tests.Serialization.MetadataPropertyHandlingTests.User;
+using User = NewtonsoftMRE.Json.Tests.Serialization.MetadataPropertyHandlingTests.User;
 
-namespace Newtonsoft.Json.Tests.Documentation.Samples.Serializer
+namespace NewtonsoftMRE.Json.Tests.Documentation.Samples.Serializer
 {
     [TestFixture]
     public class DeserializeMetadataPropertyHandling : TestFixtureBase

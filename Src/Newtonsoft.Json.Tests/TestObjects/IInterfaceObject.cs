@@ -24,9 +24,9 @@
 #endregion
 
 using System;
-using Newtonsoft.Json.Converters;
+using NewtonsoftMRE.Json.Converters;
 
-namespace Newtonsoft.Json.Tests.TestObjects
+namespace NewtonsoftMRE.Json.Tests.TestObjects
 {
     [JsonObject(MemberSerialization = MemberSerialization.OptIn)]
     public interface IInterfaceObject

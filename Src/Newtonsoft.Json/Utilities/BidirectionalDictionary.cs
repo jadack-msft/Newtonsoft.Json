@@ -27,7 +27,7 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 
-namespace Newtonsoft.Json.Utilities
+namespace NewtonsoftMRE.Json.Utilities
 {
     internal class BidirectionalDictionary<TFirst, TSecond>
     {

@@ -23,7 +23,7 @@
 // OTHER DEALINGS IN THE SOFTWARE.
 #endregion
 
-namespace Newtonsoft.Json.Linq
+namespace NewtonsoftMRE.Json.Linq
 {
     /// <summary>
     /// Specifies the type of token.

@@ -26,22 +26,22 @@
 using System;
 using System.Collections.Generic;
 #if NET20
-using Newtonsoft.Json.Utilities.LinqBridge;
+using NewtonsoftMRE.Json.Utilities.LinqBridge;
 #else
 using System.Linq;
 #endif
 using System.Text;
-using Newtonsoft.Json.Serialization;
+using NewtonsoftMRE.Json.Serialization;
 #if DNXCORE50
 using Xunit;
 using Test = Xunit.FactAttribute;
-using Assert = Newtonsoft.Json.Tests.XUnitAssert;
+using Assert = NewtonsoftMRE.Json.Tests.XUnitAssert;
 #else
 using NUnit.Framework;
 
 #endif
 
-namespace Newtonsoft.Json.Tests.Documentation.Samples.Serializer
+namespace NewtonsoftMRE.Json.Tests.Documentation.Samples.Serializer
 {
     [TestFixture]
     public class TraceWriter : TestFixtureBase
@@ -72,9 +72,9 @@ namespace Newtonsoft.Json.Tests.Documentation.Samples.Serializer
             });
 
             Console.WriteLine(traceWriter.ToString());
-            // 2013-01-21T01:36:24.422 Info Started deserializing Newtonsoft.Json.Tests.Documentation.Examples.TraceWriter+Account. Path 'FullName', line 2, position 20.
-            // 2013-01-21T01:36:24.442 Verbose Could not find member 'DeletedDate' on Newtonsoft.Json.Tests.Documentation.Examples.TraceWriter+Account. Path 'DeletedDate', line 4, position 23.
-            // 2013-01-21T01:36:24.447 Info Finished deserializing Newtonsoft.Json.Tests.Documentation.Examples.TraceWriter+Account. Path '', line 5, position 8.
+            // 2013-01-21T01:36:24.422 Info Started deserializing NewtonsoftMRE.Json.Tests.Documentation.Examples.TraceWriter+Account. Path 'FullName', line 2, position 20.
+            // 2013-01-21T01:36:24.442 Verbose Could not find member 'DeletedDate' on NewtonsoftMRE.Json.Tests.Documentation.Examples.TraceWriter+Account. Path 'DeletedDate', line 4, position 23.
+            // 2013-01-21T01:36:24.447 Info Finished deserializing NewtonsoftMRE.Json.Tests.Documentation.Examples.TraceWriter+Account. Path '', line 5, position 8.
             // 2013-01-21T01:36:24.450 Verbose Deserialized JSON: 
             // {
             //   "FullName": "Dan Deleted",

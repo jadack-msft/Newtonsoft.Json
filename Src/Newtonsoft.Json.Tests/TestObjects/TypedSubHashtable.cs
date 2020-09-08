@@ -25,7 +25,7 @@
 
 using System.Collections;
 
-namespace Newtonsoft.Json.Tests.TestObjects
+namespace NewtonsoftMRE.Json.Tests.TestObjects
 {
 #if !(DNXCORE50) || NETSTANDARD2_0
     public class TypedSubHashtable

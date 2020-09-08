@@ -28,26 +28,26 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.Serialization;
 using System.Text;
-using Newtonsoft.Json.Converters;
-using Newtonsoft.Json.Serialization;
-using Newtonsoft.Json.Tests.TestObjects;
+using NewtonsoftMRE.Json.Converters;
+using NewtonsoftMRE.Json.Serialization;
+using NewtonsoftMRE.Json.Tests.TestObjects;
 #if NET20
-using Newtonsoft.Json.Utilities.LinqBridge;
+using NewtonsoftMRE.Json.Utilities.LinqBridge;
 #else
 using System.Linq;
 #endif
 #if DNXCORE50
 using Xunit;
 using Test = Xunit.FactAttribute;
-using Assert = Newtonsoft.Json.Tests.XUnitAssert;
+using Assert = NewtonsoftMRE.Json.Tests.XUnitAssert;
 #else
 using NUnit.Framework;
 #endif
 using System.IO;
-using Newtonsoft.Json.Linq;
-using ErrorEventArgs = Newtonsoft.Json.Serialization.ErrorEventArgs;
+using NewtonsoftMRE.Json.Linq;
+using ErrorEventArgs = NewtonsoftMRE.Json.Serialization.ErrorEventArgs;
 
-namespace Newtonsoft.Json.Tests.Serialization
+namespace NewtonsoftMRE.Json.Tests.Serialization
 {
     [TestFixture]
     public class SerializationErrorHandlingTests : TestFixtureBase
@@ -115,7 +115,7 @@ namespace Newtonsoft.Json.Tests.Serialization
             var json = "{\"myint\":3554860000,\"Mybool\":false}";
             var i = JsonConvert.DeserializeObject<MyClass1>(json, new JsonSerializerSettings
             {
-                Error = delegate (object sender, Newtonsoft.Json.Serialization.ErrorEventArgs args)
+                Error = delegate (object sender, NewtonsoftMRE.Json.Serialization.ErrorEventArgs args)
                 {
                     errors.Add(args.ErrorContext.Error.Message);
                     args.ErrorContext.Handled = true;

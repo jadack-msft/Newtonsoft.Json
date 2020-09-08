@@ -26,7 +26,7 @@
 using System;
 using System.Runtime.Serialization;
 
-namespace Newtonsoft.Json.Schema
+namespace NewtonsoftMRE.Json.Schema
 {
     /// <summary>
     /// <para>

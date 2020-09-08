@@ -30,24 +30,24 @@ using System.Globalization;
 #if DNXCORE50
 using Xunit;
 using Test = Xunit.FactAttribute;
-using Assert = Newtonsoft.Json.Tests.XUnitAssert;
+using Assert = NewtonsoftMRE.Json.Tests.XUnitAssert;
 #else
 using NUnit.Framework;
 #endif
-using Newtonsoft.Json.Converters;
-using Newtonsoft.Json.Linq;
-using Newtonsoft.Json.Tests.Serialization;
-using Newtonsoft.Json.Tests.TestObjects;
-using Newtonsoft.Json.Tests.TestObjects.Organization;
+using NewtonsoftMRE.Json.Converters;
+using NewtonsoftMRE.Json.Linq;
+using NewtonsoftMRE.Json.Tests.Serialization;
+using NewtonsoftMRE.Json.Tests.TestObjects;
+using NewtonsoftMRE.Json.Tests.TestObjects.Organization;
 #if NET20
-using Newtonsoft.Json.Utilities.LinqBridge;
+using NewtonsoftMRE.Json.Utilities.LinqBridge;
 #else
 using System.Linq;
 #endif
 using System.IO;
 using System.Runtime.Serialization;
 
-namespace Newtonsoft.Json.Tests.Linq
+namespace NewtonsoftMRE.Json.Tests.Linq
 {
     [TestFixture]
     public class LinqToJsonTest : TestFixtureBase

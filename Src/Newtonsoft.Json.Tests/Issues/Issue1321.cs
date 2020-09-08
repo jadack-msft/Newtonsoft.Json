@@ -31,8 +31,8 @@ using System.Text;
 #if !(NET20 || NET35 || NET40 || PORTABLE40)
 using System.Threading.Tasks;
 #endif
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
+using NewtonsoftMRE.Json;
+using NewtonsoftMRE.Json.Linq;
 using System.Xml;
 #if !NET20
 using System.Xml.Linq;
@@ -40,12 +40,12 @@ using System.Xml.Linq;
 #if DNXCORE50
 using Xunit;
 using Test = Xunit.FactAttribute;
-using Assert = Newtonsoft.Json.Tests.XUnitAssert;
+using Assert = NewtonsoftMRE.Json.Tests.XUnitAssert;
 #else
 using NUnit.Framework;
 #endif
 
-namespace Newtonsoft.Json.Tests.Issues
+namespace NewtonsoftMRE.Json.Tests.Issues
 {
     [TestFixture]
     public class Issue1321 : TestFixtureBase

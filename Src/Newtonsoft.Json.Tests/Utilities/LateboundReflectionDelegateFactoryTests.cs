@@ -1,21 +1,21 @@
 using System;
 using System.Reflection;
-using Newtonsoft.Json.Utilities;
+using NewtonsoftMRE.Json.Utilities;
 #if DNXCORE50
 using Xunit;
 using Test = Xunit.FactAttribute;
-using Assert = Newtonsoft.Json.Tests.XUnitAssert;
+using Assert = NewtonsoftMRE.Json.Tests.XUnitAssert;
 #else
 using NUnit.Framework;
 #endif
 #if NET20
-using Newtonsoft.Json.Utilities.LinqBridge;
+using NewtonsoftMRE.Json.Utilities.LinqBridge;
 #else
 using System.Linq;
 
 #endif
 
-namespace Newtonsoft.Json.Tests.Utilities
+namespace NewtonsoftMRE.Json.Tests.Utilities
 {
     public class OutAndRefTestClass
     {

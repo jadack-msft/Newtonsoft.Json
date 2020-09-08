@@ -28,21 +28,21 @@ using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization.Formatters;
 using System.Text;
-using Newtonsoft.Json.Linq;
-using Newtonsoft.Json.Serialization;
-using Newtonsoft.Json.Tests.TestObjects;
-using Newtonsoft.Json.Tests.TestObjects.Organization;
-using Newtonsoft.Json.Utilities;
+using NewtonsoftMRE.Json.Linq;
+using NewtonsoftMRE.Json.Serialization;
+using NewtonsoftMRE.Json.Tests.TestObjects;
+using NewtonsoftMRE.Json.Tests.TestObjects.Organization;
+using NewtonsoftMRE.Json.Utilities;
 #if DNXCORE50
 using Xunit;
 using Test = Xunit.FactAttribute;
-using Assert = Newtonsoft.Json.Tests.XUnitAssert;
+using Assert = NewtonsoftMRE.Json.Tests.XUnitAssert;
 #else
 using NUnit.Framework;
 
 #endif
 
-namespace Newtonsoft.Json.Tests.Serialization
+namespace NewtonsoftMRE.Json.Tests.Serialization
 {
     [TestFixture]
     public class PreserveReferencesHandlingTests : TestFixtureBase
@@ -112,14 +112,14 @@ namespace Newtonsoft.Json.Tests.Serialization
 
             StringAssert.AreEqual(@"{
   ""$id"": ""1"",
-  ""$type"": ""Newtonsoft.Json.Tests.Serialization.PreserveReferencesHandlingTests+Container, Newtonsoft.Json.Tests"",
+  ""$type"": ""NewtonsoftMRE.Json.Tests.Serialization.PreserveReferencesHandlingTests+Container, NewtonsoftMRE.Json.Tests"",
   ""ListA"": {
     ""$id"": ""2"",
     ""$type"": """ + ReflectionUtils.GetTypeName(typeof(List<ContentA>), 0, DefaultSerializationBinder.Instance) + @""",
     ""$values"": [
       {
         ""$id"": ""3"",
-        ""$type"": ""Newtonsoft.Json.Tests.Serialization.PreserveReferencesHandlingTests+ContentB, Newtonsoft.Json.Tests"",
+        ""$type"": ""NewtonsoftMRE.Json.Tests.Serialization.PreserveReferencesHandlingTests+ContentB, NewtonsoftMRE.Json.Tests"",
         ""SomeValue"": true
       }
     ]

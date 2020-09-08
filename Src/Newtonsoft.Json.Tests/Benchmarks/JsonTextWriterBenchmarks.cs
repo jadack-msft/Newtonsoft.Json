@@ -29,7 +29,7 @@ using System.IO;
 using BenchmarkDotNet.Attributes;
 using BenchmarkDotNet.Running;
 
-namespace Newtonsoft.Json.Tests.Benchmarks
+namespace NewtonsoftMRE.Json.Tests.Benchmarks
 {
     public class JsonTextWriterBenchmarks
     {

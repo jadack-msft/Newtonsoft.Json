@@ -33,18 +33,18 @@ using System.Linq;
 using System.Numerics;
 #endif
 using System.Text;
-using Newtonsoft.Json.Linq;
+using NewtonsoftMRE.Json.Linq;
 #if DNXCORE50
 using Xunit;
 using Test = Xunit.FactAttribute;
-using Assert = Newtonsoft.Json.Tests.XUnitAssert;
+using Assert = NewtonsoftMRE.Json.Tests.XUnitAssert;
 #else
 using NUnit.Framework;
 #endif
-using Newtonsoft.Json.Utilities;
+using NewtonsoftMRE.Json.Utilities;
 using System.Globalization;
 
-namespace Newtonsoft.Json.Tests.Linq
+namespace NewtonsoftMRE.Json.Tests.Linq
 {
     [TestFixture]
     public class DynamicTests : TestFixtureBase
@@ -952,7 +952,7 @@ namespace Newtonsoft.Json.Tests.Linq
 
             ExceptionAssert.Throws<InvalidOperationException>(
                 () => { JObject token = json.uid; },
-                "Can not convert from System.Guid to Newtonsoft.Json.Linq.JObject.");
+                "Can not convert from System.Guid to NewtonsoftMRE.Json.Linq.JObject.");
         }
     }
 

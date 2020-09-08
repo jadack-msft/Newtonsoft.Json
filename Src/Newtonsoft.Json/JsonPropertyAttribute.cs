@@ -24,9 +24,9 @@
 #endregion
 
 using System;
-using Newtonsoft.Json.Serialization;
+using NewtonsoftMRE.Json.Serialization;
 
-namespace Newtonsoft.Json
+namespace NewtonsoftMRE.Json
 {
     /// <summary>
     /// Instructs the <see cref="JsonSerializer"/> to always serialize the member with the specified name.

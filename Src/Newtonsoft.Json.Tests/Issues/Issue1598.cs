@@ -32,17 +32,17 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.Serialization;
-using Newtonsoft.Json.Linq;
-using Newtonsoft.Json.Serialization;
+using NewtonsoftMRE.Json.Linq;
+using NewtonsoftMRE.Json.Serialization;
 #if DNXCORE50
 using Xunit;
 using Test = Xunit.FactAttribute;
-using Assert = Newtonsoft.Json.Tests.XUnitAssert;
+using Assert = NewtonsoftMRE.Json.Tests.XUnitAssert;
 #else
 using NUnit.Framework;
 #endif
 
-namespace Newtonsoft.Json.Tests.Issues
+namespace NewtonsoftMRE.Json.Tests.Issues
 {
     [TestFixture]
     public class Issue1598 : TestFixtureBase
@@ -61,7 +61,7 @@ namespace Newtonsoft.Json.Tests.Issues
 
             string json = JsonConvert.SerializeObject(activities, Formatting.Indented);
             // note that this has been reverted back in 11.0.2 because it is causing compat issues
-            // https://github.com/JamesNK/Newtonsoft.Json/issues/1627
+            // https://github.com/JamesNK/NewtonsoftMRE.Json/issues/1627
             StringAssert.AreEqual(@"[
   {
     ""Name"": ""An activity""

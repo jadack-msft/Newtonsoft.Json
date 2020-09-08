@@ -25,7 +25,7 @@
 
 using System.ComponentModel;
 
-namespace Newtonsoft.Json.Tests.TestObjects
+namespace NewtonsoftMRE.Json.Tests.TestObjects
 {
 #if !(DNXCORE50)
     [Description("DefaultValueAttributeTestClass description!")]

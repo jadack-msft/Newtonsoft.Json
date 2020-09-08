@@ -34,16 +34,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BenchmarkDotNet.Attributes;
-using Newtonsoft.Json.Utilities;
+using NewtonsoftMRE.Json.Utilities;
 #if !PORTABLE || NETSTANDARD2_0
 using MemberTypes = System.Reflection.MemberTypes;
 using BindingFlags = System.Reflection.BindingFlags;
 #else
-using MemberTypes = Newtonsoft.Json.Utilities.MemberTypes;
-using BindingFlags = Newtonsoft.Json.Utilities.BindingFlags;
+using MemberTypes = NewtonsoftMRE.Json.Utilities.MemberTypes;
+using BindingFlags = NewtonsoftMRE.Json.Utilities.BindingFlags;
 #endif
 
-namespace Newtonsoft.Json.Tests.Benchmarks
+namespace NewtonsoftMRE.Json.Tests.Benchmarks
 {
     public class LowLevelBenchmarks
     {

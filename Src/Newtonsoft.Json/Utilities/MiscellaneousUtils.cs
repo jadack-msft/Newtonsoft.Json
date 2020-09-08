@@ -32,7 +32,7 @@ using System.Text;
 using System.Globalization;
 using System.Text.RegularExpressions;
 
-namespace Newtonsoft.Json.Utilities
+namespace NewtonsoftMRE.Json.Utilities
 {
     internal delegate T Creator<T>();
 

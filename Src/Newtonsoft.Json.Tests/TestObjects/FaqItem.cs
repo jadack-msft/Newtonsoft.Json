@@ -31,7 +31,7 @@ using System.Text;
 using System.ComponentModel.DataAnnotations;
 #endif
 
-namespace Newtonsoft.Json.Tests.TestObjects
+namespace NewtonsoftMRE.Json.Tests.TestObjects
 {
 #if !(DNXCORE50 || NET20)
     [Serializable]

@@ -31,9 +31,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BenchmarkDotNet.Attributes;
-using Newtonsoft.Json.Linq;
+using NewtonsoftMRE.Json.Linq;
 
-namespace Newtonsoft.Json.Tests.Benchmarks
+namespace NewtonsoftMRE.Json.Tests.Benchmarks
 {
     public class JValueConvertBenchmarks
     {

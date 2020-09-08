@@ -24,13 +24,13 @@
 #endregion
 
 #pragma warning disable 618
-using Newtonsoft.Json.Linq;
-using Newtonsoft.Json.Schema;
+using NewtonsoftMRE.Json.Linq;
+using NewtonsoftMRE.Json.Schema;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Newtonsoft.Json.Tests.Documentation.Samples.Schema
+namespace NewtonsoftMRE.Json.Tests.Documentation.Samples.Schema
 {
     public class RefJsonSchemaResolver
     {

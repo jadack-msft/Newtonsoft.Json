@@ -27,21 +27,21 @@ using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization.Formatters;
 using System.Text;
-using Newtonsoft.Json.Linq;
-using Newtonsoft.Json.Serialization;
-using Newtonsoft.Json.Tests.TestObjects;
-using Newtonsoft.Json.Tests.TestObjects.Organization;
-using Newtonsoft.Json.Utilities;
+using NewtonsoftMRE.Json.Linq;
+using NewtonsoftMRE.Json.Serialization;
+using NewtonsoftMRE.Json.Tests.TestObjects;
+using NewtonsoftMRE.Json.Tests.TestObjects.Organization;
+using NewtonsoftMRE.Json.Utilities;
 #if DNXCORE50
 using Xunit;
 using Test = Xunit.FactAttribute;
-using Assert = Newtonsoft.Json.Tests.XUnitAssert;
+using Assert = NewtonsoftMRE.Json.Tests.XUnitAssert;
 #else
 using NUnit.Framework;
 
 #endif
 
-namespace Newtonsoft.Json.Tests.Serialization
+namespace NewtonsoftMRE.Json.Tests.Serialization
 {
     [TestFixture]
     public class MetadataPropertyHandlingTests : TestFixtureBase
@@ -57,7 +57,7 @@ namespace Newtonsoft.Json.Tests.Serialization
             string json = @"{
 	            'Name': 'James',
 	            'Password': 'Password1',
-	            '$type': 'Newtonsoft.Json.Tests.Serialization.MetadataPropertyHandlingTests+User, Newtonsoft.Json.Tests'
+	            '$type': 'NewtonsoftMRE.Json.Tests.Serialization.MetadataPropertyHandlingTests+User, NewtonsoftMRE.Json.Tests'
             }";
 
             object o = JsonConvert.DeserializeObject(json, new JsonSerializerSettings
@@ -226,7 +226,7 @@ namespace Newtonsoft.Json.Tests.Serialization
         {
             string json = @"{
   ""$id"": ""1"",
-  ""$type"": ""Newtonsoft.Json.Tests.TestObjects.Employee"",
+  ""$type"": ""NewtonsoftMRE.Json.Tests.TestObjects.Employee"",
   ""Name"": ""Name!"",
   ""Manager"": null
 }";
@@ -238,7 +238,7 @@ namespace Newtonsoft.Json.Tests.Serialization
                     TypeNameHandling = TypeNameHandling.Objects,
                     MetadataPropertyHandling = MetadataPropertyHandling.ReadAhead
                 });
-            }, "Type specified in JSON 'Newtonsoft.Json.Tests.TestObjects.Employee' was not resolved. Path '$type', line 3, position 55.");
+            }, "Type specified in JSON 'NewtonsoftMRE.Json.Tests.TestObjects.Employee' was not resolved. Path '$type', line 3, position 55.");
         }
 
         [Test]
@@ -558,7 +558,7 @@ namespace Newtonsoft.Json.Tests.Serialization
   ""Payload1"": 1,
   ""Payload2"": {'prop1':1,'prop2':[2]},
   ""Payload3"": [1],
-  ""$type"": ""Newtonsoft.Json.Tests.Serialization.MetadataPropertyHandlingTests+ItemWithJTokens, Newtonsoft.Json.Tests""
+  ""$type"": ""NewtonsoftMRE.Json.Tests.Serialization.MetadataPropertyHandlingTests+ItemWithJTokens, NewtonsoftMRE.Json.Tests""
 }",
                 new JsonSerializerSettings
                 {

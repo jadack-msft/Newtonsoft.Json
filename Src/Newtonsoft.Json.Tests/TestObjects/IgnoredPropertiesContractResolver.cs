@@ -24,9 +24,9 @@
 #endregion
 
 using System;
-using Newtonsoft.Json.Serialization;
+using NewtonsoftMRE.Json.Serialization;
 
-namespace Newtonsoft.Json.Tests.TestObjects
+namespace NewtonsoftMRE.Json.Tests.TestObjects
 {
     public class IgnoredPropertiesContractResolver : DefaultContractResolver
     {

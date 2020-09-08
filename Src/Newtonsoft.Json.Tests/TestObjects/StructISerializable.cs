@@ -25,7 +25,7 @@
 
 using System.Runtime.Serialization;
 
-namespace Newtonsoft.Json.Tests.TestObjects
+namespace NewtonsoftMRE.Json.Tests.TestObjects
 {
 #if !(NET20 || DNXCORE50) || NETSTANDARD2_0
     [DataContract]

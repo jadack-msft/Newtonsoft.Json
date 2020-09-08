@@ -23,23 +23,23 @@
 // OTHER DEALINGS IN THE SOFTWARE.
 #endregion
 
-using Newtonsoft.Json.Linq;
-using Newtonsoft.Json.Linq.JsonPath;
+using NewtonsoftMRE.Json.Linq;
+using NewtonsoftMRE.Json.Linq.JsonPath;
 using System;
 using System.Collections.Generic;
-using Newtonsoft.Json.Converters;
+using NewtonsoftMRE.Json.Converters;
 using System.Reflection;
 using System.Runtime.Versioning;
-using Newtonsoft.Json.Serialization;
+using NewtonsoftMRE.Json.Serialization;
 #if DNXCORE50
 using Xunit;
 using Test = Xunit.FactAttribute;
-using Assert = Newtonsoft.Json.Tests.XUnitAssert;
+using Assert = NewtonsoftMRE.Json.Tests.XUnitAssert;
 #else
 using NUnit.Framework;
 #endif
 
-namespace Newtonsoft.Json.Tests.Issues
+namespace NewtonsoftMRE.Json.Tests.Issues
 {
     [TestFixture]
     public class Issue1798

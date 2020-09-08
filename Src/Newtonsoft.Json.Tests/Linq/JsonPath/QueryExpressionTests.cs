@@ -26,18 +26,18 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using Newtonsoft.Json.Linq;
-using Newtonsoft.Json.Linq.JsonPath;
+using NewtonsoftMRE.Json.Linq;
+using NewtonsoftMRE.Json.Linq.JsonPath;
 #if DNXCORE50
 using Xunit;
 using Test = Xunit.FactAttribute;
-using Assert = Newtonsoft.Json.Tests.XUnitAssert;
+using Assert = NewtonsoftMRE.Json.Tests.XUnitAssert;
 #else
 using NUnit.Framework;
 
 #endif
 
-namespace Newtonsoft.Json.Tests.Linq.JsonPath
+namespace NewtonsoftMRE.Json.Tests.Linq.JsonPath
 {
     [TestFixture]
     public class QueryExpressionTests : TestFixtureBase

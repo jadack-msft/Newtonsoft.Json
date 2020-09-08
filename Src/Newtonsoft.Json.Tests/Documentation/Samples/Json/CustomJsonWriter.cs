@@ -29,11 +29,11 @@ using System.Globalization;
 using System.IO;
 using System.Text;
 using System.Xml;
-using Newtonsoft.Json.Linq;
+using NewtonsoftMRE.Json.Linq;
 #if DNXCORE50
 using Xunit;
 using Test = Xunit.FactAttribute;
-using Assert = Newtonsoft.Json.Tests.XUnitAssert;
+using Assert = NewtonsoftMRE.Json.Tests.XUnitAssert;
 #else
 using NUnit.Framework;
 
@@ -41,7 +41,7 @@ using NUnit.Framework;
 
 #if !(DNXCORE50 || NET20) || NETSTANDARD2_0
 
-namespace Newtonsoft.Json.Tests.Documentation.Samples.Json
+namespace NewtonsoftMRE.Json.Tests.Documentation.Samples.Json
 {
 
     #region Types

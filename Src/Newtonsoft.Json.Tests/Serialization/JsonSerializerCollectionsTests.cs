@@ -33,22 +33,22 @@ using System.Collections.ObjectModel;
 using System.Globalization;
 using System.IO;
 #if NET20
-using Newtonsoft.Json.Utilities.LinqBridge;
+using NewtonsoftMRE.Json.Utilities.LinqBridge;
 #else
 using System.Linq;
 #endif
 using System.Text;
 using System.Xml;
-using Newtonsoft.Json.Linq;
-using Newtonsoft.Json.Serialization;
-using Newtonsoft.Json.Tests.TestObjects;
-using Newtonsoft.Json.Tests.TestObjects.Events;
-using Newtonsoft.Json.Tests.TestObjects.Organization;
-using Newtonsoft.Json.Utilities;
+using NewtonsoftMRE.Json.Linq;
+using NewtonsoftMRE.Json.Serialization;
+using NewtonsoftMRE.Json.Tests.TestObjects;
+using NewtonsoftMRE.Json.Tests.TestObjects.Events;
+using NewtonsoftMRE.Json.Tests.TestObjects.Organization;
+using NewtonsoftMRE.Json.Utilities;
 #if DNXCORE50
 using Xunit;
 using Test = Xunit.FactAttribute;
-using Assert = Newtonsoft.Json.Tests.XUnitAssert;
+using Assert = NewtonsoftMRE.Json.Tests.XUnitAssert;
 #else
 using NUnit.Framework;
 #endif
@@ -56,7 +56,7 @@ using NUnit.Framework;
 using System.Xml.Linq;
 #endif
 
-namespace Newtonsoft.Json.Tests.Serialization
+namespace NewtonsoftMRE.Json.Tests.Serialization
 {
     [TestFixture]
     public class JsonSerializerCollectionsTests : TestFixtureBase
@@ -257,7 +257,7 @@ namespace Newtonsoft.Json.Tests.Serialization
         {
             ExceptionAssert.Throws<JsonException>(
                 () => JsonConvert.SerializeObject(new TestCollectionMultipleParameters(null, null)),
-                "Constructor for 'Newtonsoft.Json.Tests.Serialization.JsonSerializerCollectionsTests+TestCollectionMultipleParameters' must have no parameters or a single parameter that implements 'System.Collections.Generic.IEnumerable`1[System.Int32]'.");
+                "Constructor for 'NewtonsoftMRE.Json.Tests.Serialization.JsonSerializerCollectionsTests+TestCollectionMultipleParameters' must have no parameters or a single parameter that implements 'System.Collections.Generic.IEnumerable`1[System.Int32]'.");
         }
 
         public class TestCollectionBadIEnumerableParameter : List<int>
@@ -273,7 +273,7 @@ namespace Newtonsoft.Json.Tests.Serialization
         {
             ExceptionAssert.Throws<JsonException>(
                 () => JsonConvert.SerializeObject(new TestCollectionBadIEnumerableParameter(null)),
-                "Constructor for 'Newtonsoft.Json.Tests.Serialization.JsonSerializerCollectionsTests+TestCollectionBadIEnumerableParameter' must have no parameters or a single parameter that implements 'System.Collections.Generic.IEnumerable`1[System.Int32]'.");
+                "Constructor for 'NewtonsoftMRE.Json.Tests.Serialization.JsonSerializerCollectionsTests+TestCollectionBadIEnumerableParameter' must have no parameters or a single parameter that implements 'System.Collections.Generic.IEnumerable`1[System.Int32]'.");
         }
 
 #if !(DNXCORE50 || PORTABLE) || NETSTANDARD2_0
@@ -370,7 +370,7 @@ namespace Newtonsoft.Json.Tests.Serialization
         {
             ExceptionAssert.Throws<JsonException>(
                 () => JsonConvert.SerializeObject(new TestDictionaryMultipleParameters(null, null)),
-                "Constructor for 'Newtonsoft.Json.Tests.Serialization.JsonSerializerCollectionsTests+TestDictionaryMultipleParameters' must have no parameters or a single parameter that implements 'System.Collections.Generic.IEnumerable`1[System.Collections.Generic.KeyValuePair`2[System.String,System.Int32]]'.");
+                "Constructor for 'NewtonsoftMRE.Json.Tests.Serialization.JsonSerializerCollectionsTests+TestDictionaryMultipleParameters' must have no parameters or a single parameter that implements 'System.Collections.Generic.IEnumerable`1[System.Collections.Generic.KeyValuePair`2[System.String,System.Int32]]'.");
         }
 
         public class TestDictionaryBadIEnumerableParameter : Dictionary<string, int>
@@ -386,7 +386,7 @@ namespace Newtonsoft.Json.Tests.Serialization
         {
             ExceptionAssert.Throws<JsonException>(
                 () => JsonConvert.SerializeObject(new TestDictionaryBadIEnumerableParameter(null)),
-                "Constructor for 'Newtonsoft.Json.Tests.Serialization.JsonSerializerCollectionsTests+TestDictionaryBadIEnumerableParameter' must have no parameters or a single parameter that implements 'System.Collections.Generic.IEnumerable`1[System.Collections.Generic.KeyValuePair`2[System.String,System.Int32]]'.");
+                "Constructor for 'NewtonsoftMRE.Json.Tests.Serialization.JsonSerializerCollectionsTests+TestDictionaryBadIEnumerableParameter' must have no parameters or a single parameter that implements 'System.Collections.Generic.IEnumerable`1[System.Collections.Generic.KeyValuePair`2[System.String,System.Int32]]'.");
         }
 
 #if !(DNXCORE50 || PORTABLE) || NETSTANDARD2_0
@@ -646,7 +646,7 @@ namespace Newtonsoft.Json.Tests.Serialization
   ""3""
 ]";
 
-            ExceptionAssert.Throws<JsonSerializationException>(() => JsonConvert.DeserializeObject<EnumerableClassFailure<string>>(json), "Cannot create and populate list type Newtonsoft.Json.Tests.Serialization.JsonSerializerCollectionsTests+EnumerableClassFailure`1[System.String]. Path '', line 1, position 1.");
+            ExceptionAssert.Throws<JsonSerializationException>(() => JsonConvert.DeserializeObject<EnumerableClassFailure<string>>(json), "Cannot create and populate list type NewtonsoftMRE.Json.Tests.Serialization.JsonSerializerCollectionsTests+EnumerableClassFailure`1[System.String]. Path '', line 1, position 1.");
         }
 
         public class PrivateDefaultCtorList<T> : List<T>
@@ -659,7 +659,7 @@ namespace Newtonsoft.Json.Tests.Serialization
         [Test]
         public void DeserializePrivateListCtor()
         {
-            ExceptionAssert.Throws<JsonSerializationException>(() => JsonConvert.DeserializeObject<PrivateDefaultCtorList<int>>("[1,2]"), "Unable to find a constructor to use for type Newtonsoft.Json.Tests.Serialization.JsonSerializerCollectionsTests+PrivateDefaultCtorList`1[System.Int32]. Path '', line 1, position 1.");
+            ExceptionAssert.Throws<JsonSerializationException>(() => JsonConvert.DeserializeObject<PrivateDefaultCtorList<int>>("[1,2]"), "Unable to find a constructor to use for type NewtonsoftMRE.Json.Tests.Serialization.JsonSerializerCollectionsTests+PrivateDefaultCtorList`1[System.Int32]. Path '', line 1, position 1.");
 
             var list = JsonConvert.DeserializeObject<PrivateDefaultCtorList<int>>("[1,2]", new JsonSerializerSettings
             {
@@ -1674,17 +1674,17 @@ namespace Newtonsoft.Json.Tests.Serialization
   ""$type"": """ + ReflectionUtils.GetTypeName(typeof(List<Event1[,]>), 0, DefaultSerializationBinder.Instance) + @""",
   ""$values"": [
     {
-      ""$type"": ""Newtonsoft.Json.Tests.TestObjects.Events.Event1[,], Newtonsoft.Json.Tests"",
+      ""$type"": ""NewtonsoftMRE.Json.Tests.TestObjects.Events.Event1[,], NewtonsoftMRE.Json.Tests"",
       ""$values"": [
         [
           {
-            ""$type"": ""Newtonsoft.Json.Tests.TestObjects.Events.Event1, Newtonsoft.Json.Tests"",
+            ""$type"": ""NewtonsoftMRE.Json.Tests.TestObjects.Events.Event1, NewtonsoftMRE.Json.Tests"",
             ""EventName"": ""EventName!"",
             ""Venue"": null,
             ""Performances"": null
           },
           {
-            ""$type"": ""Newtonsoft.Json.Tests.TestObjects.Events.Event1, Newtonsoft.Json.Tests"",
+            ""$type"": ""NewtonsoftMRE.Json.Tests.TestObjects.Events.Event1, NewtonsoftMRE.Json.Tests"",
             ""EventName"": ""EventName!"",
             ""Venue"": null,
             ""Performances"": null
@@ -1692,13 +1692,13 @@ namespace Newtonsoft.Json.Tests.Serialization
         ],
         [
           {
-            ""$type"": ""Newtonsoft.Json.Tests.TestObjects.Events.Event1, Newtonsoft.Json.Tests"",
+            ""$type"": ""NewtonsoftMRE.Json.Tests.TestObjects.Events.Event1, NewtonsoftMRE.Json.Tests"",
             ""EventName"": ""EventName!"",
             ""Venue"": null,
             ""Performances"": null
           },
           {
-            ""$type"": ""Newtonsoft.Json.Tests.TestObjects.Events.Event1, Newtonsoft.Json.Tests"",
+            ""$type"": ""NewtonsoftMRE.Json.Tests.TestObjects.Events.Event1, NewtonsoftMRE.Json.Tests"",
             ""EventName"": ""EventName!"",
             ""Venue"": null,
             ""Performances"": null
@@ -1707,17 +1707,17 @@ namespace Newtonsoft.Json.Tests.Serialization
       ]
     },
     {
-      ""$type"": ""Newtonsoft.Json.Tests.TestObjects.Events.Event1[,], Newtonsoft.Json.Tests"",
+      ""$type"": ""NewtonsoftMRE.Json.Tests.TestObjects.Events.Event1[,], NewtonsoftMRE.Json.Tests"",
       ""$values"": [
         [
           {
-            ""$type"": ""Newtonsoft.Json.Tests.TestObjects.Events.Event1, Newtonsoft.Json.Tests"",
+            ""$type"": ""NewtonsoftMRE.Json.Tests.TestObjects.Events.Event1, NewtonsoftMRE.Json.Tests"",
             ""EventName"": ""EventName!"",
             ""Venue"": null,
             ""Performances"": null
           },
           {
-            ""$type"": ""Newtonsoft.Json.Tests.TestObjects.Events.Event1, Newtonsoft.Json.Tests"",
+            ""$type"": ""NewtonsoftMRE.Json.Tests.TestObjects.Events.Event1, NewtonsoftMRE.Json.Tests"",
             ""EventName"": ""EventName!"",
             ""Venue"": null,
             ""Performances"": null
@@ -1725,13 +1725,13 @@ namespace Newtonsoft.Json.Tests.Serialization
         ],
         [
           {
-            ""$type"": ""Newtonsoft.Json.Tests.TestObjects.Events.Event1, Newtonsoft.Json.Tests"",
+            ""$type"": ""NewtonsoftMRE.Json.Tests.TestObjects.Events.Event1, NewtonsoftMRE.Json.Tests"",
             ""EventName"": ""EventName!"",
             ""Venue"": null,
             ""Performances"": null
           },
           {
-            ""$type"": ""Newtonsoft.Json.Tests.TestObjects.Events.Event1, Newtonsoft.Json.Tests"",
+            ""$type"": ""NewtonsoftMRE.Json.Tests.TestObjects.Events.Event1, NewtonsoftMRE.Json.Tests"",
             ""EventName"": ""EventName!"",
             ""Venue"": null,
             ""Performances"": null
@@ -2072,7 +2072,7 @@ namespace Newtonsoft.Json.Tests.Serialization
             ExceptionAssert.Throws<JsonSerializationException>(() =>
             {
                 JsonConvert.DeserializeObject<ReadOnlyCollectionWithArrayArgument<double>>(json);
-            }, "Unable to find a constructor to use for type Newtonsoft.Json.Tests.Serialization.ReadOnlyCollectionWithArrayArgument`1[System.Double]. Path '', line 1, position 1.");
+            }, "Unable to find a constructor to use for type NewtonsoftMRE.Json.Tests.Serialization.ReadOnlyCollectionWithArrayArgument`1[System.Double]. Path '', line 1, position 1.");
         }
 
 #if !NET20 && !PORTABLE40

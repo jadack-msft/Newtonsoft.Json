@@ -27,7 +27,7 @@ using System;
 using System.Globalization;
 using System.Runtime.Serialization;
 
-namespace Newtonsoft.Json.Tests.TestObjects
+namespace NewtonsoftMRE.Json.Tests.TestObjects
 {
 #if !(NET20)
     [Serializable]

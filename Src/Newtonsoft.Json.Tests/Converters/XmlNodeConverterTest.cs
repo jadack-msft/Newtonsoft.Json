@@ -26,34 +26,34 @@
 #if !(DNXCORE50 || PORTABLE40) || NETSTANDARD1_3 || NETSTANDARD2_0
 using System.Globalization;
 #if NET20
-using Newtonsoft.Json.Utilities.LinqBridge;
+using NewtonsoftMRE.Json.Utilities.LinqBridge;
 #else
 using System.Linq;
 #endif
 using System.Text;
 using System;
 using System.Collections.Generic;
-using Newtonsoft.Json.Tests.Serialization;
-using Newtonsoft.Json.Tests.TestObjects;
+using NewtonsoftMRE.Json.Tests.Serialization;
+using NewtonsoftMRE.Json.Tests.TestObjects;
 #if DNXCORE50
 using Xunit;
 using Test = Xunit.FactAttribute;
-using Assert = Newtonsoft.Json.Tests.XUnitAssert;
+using Assert = NewtonsoftMRE.Json.Tests.XUnitAssert;
 #else
 using NUnit.Framework;
 #endif
-using Newtonsoft.Json;
+using NewtonsoftMRE.Json;
 using System.IO;
 using System.Xml;
-using Newtonsoft.Json.Converters;
-using Newtonsoft.Json.Utilities;
-using Newtonsoft.Json.Linq;
+using NewtonsoftMRE.Json.Converters;
+using NewtonsoftMRE.Json.Utilities;
+using NewtonsoftMRE.Json.Linq;
 #if !NET20
 using System.Xml.Linq;
 
 #endif
 
-namespace Newtonsoft.Json.Tests.Converters
+namespace NewtonsoftMRE.Json.Tests.Converters
 {
     [TestFixture]
     public class XmlNodeConverterTest : TestFixtureBase
@@ -2535,10 +2535,10 @@ namespace Newtonsoft.Json.Tests.Converters
 
         private static void JsonBodyToSoapXml(Stream json, Stream xml)
         {
-            Newtonsoft.Json.JsonSerializerSettings settings = new Newtonsoft.Json.JsonSerializerSettings();
-            settings.Converters.Add(new Newtonsoft.Json.Converters.XmlNodeConverter());
-            Newtonsoft.Json.JsonSerializer serializer = Newtonsoft.Json.JsonSerializer.Create(settings);
-            using (Newtonsoft.Json.JsonTextReader reader = new Newtonsoft.Json.JsonTextReader(new System.IO.StreamReader(json)))
+            NewtonsoftMRE.Json.JsonSerializerSettings settings = new NewtonsoftMRE.Json.JsonSerializerSettings();
+            settings.Converters.Add(new NewtonsoftMRE.Json.Converters.XmlNodeConverter());
+            NewtonsoftMRE.Json.JsonSerializer serializer = NewtonsoftMRE.Json.JsonSerializer.Create(settings);
+            using (NewtonsoftMRE.Json.JsonTextReader reader = new NewtonsoftMRE.Json.JsonTextReader(new System.IO.StreamReader(json)))
             {
                 XmlDocument doc = (XmlDocument)serializer.Deserialize(reader, typeof(XmlDocument));
                 if (reader.Read() && reader.TokenType != JsonToken.Comment)

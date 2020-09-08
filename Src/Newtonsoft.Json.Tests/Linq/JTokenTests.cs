@@ -29,26 +29,26 @@ using System.Collections.Generic;
 using System.Numerics;
 #endif
 using System.Text;
-using Newtonsoft.Json.Converters;
+using NewtonsoftMRE.Json.Converters;
 #if DNXCORE50
 using Xunit;
 using Test = Xunit.FactAttribute;
-using Assert = Newtonsoft.Json.Tests.XUnitAssert;
+using Assert = NewtonsoftMRE.Json.Tests.XUnitAssert;
 using TestCase = Xunit.InlineDataAttribute;
 #else
 using NUnit.Framework;
 #endif
-using Newtonsoft.Json.Linq;
+using NewtonsoftMRE.Json.Linq;
 using System.IO;
 #if NET20
-using Newtonsoft.Json.Utilities.LinqBridge;
+using NewtonsoftMRE.Json.Utilities.LinqBridge;
 #else
 using System.Linq;
-using Newtonsoft.Json.Utilities;
+using NewtonsoftMRE.Json.Utilities;
 
 #endif
 
-namespace Newtonsoft.Json.Tests.Linq
+namespace NewtonsoftMRE.Json.Tests.Linq
 {
     [TestFixture]
     public class JTokenTests : TestFixtureBase
@@ -970,7 +970,7 @@ namespace Newtonsoft.Json.Tests.Linq
             {
                 JArray a = new JArray();
                 a.Add(new JProperty("PropertyName"));
-            }, "Can not add Newtonsoft.Json.Linq.JProperty to Newtonsoft.Json.Linq.JArray.");
+            }, "Can not add NewtonsoftMRE.Json.Linq.JProperty to NewtonsoftMRE.Json.Linq.JArray.");
         }
 
         [Test]
@@ -980,7 +980,7 @@ namespace Newtonsoft.Json.Tests.Linq
             {
                 JObject o = new JObject();
                 o.Add(5);
-            }, "Can not add Newtonsoft.Json.Linq.JValue to Newtonsoft.Json.Linq.JObject.");
+            }, "Can not add NewtonsoftMRE.Json.Linq.JValue to NewtonsoftMRE.Json.Linq.JObject.");
         }
 
         [Test]

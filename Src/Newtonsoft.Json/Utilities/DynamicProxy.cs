@@ -27,7 +27,7 @@
 using System.Collections.Generic;
 using System.Dynamic;
 
-namespace Newtonsoft.Json.Utilities
+namespace NewtonsoftMRE.Json.Utilities
 {
     internal class DynamicProxy<T>
     {

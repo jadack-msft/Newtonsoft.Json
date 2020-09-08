@@ -30,9 +30,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Text;
-using Newtonsoft.Json.Serialization;
+using NewtonsoftMRE.Json.Serialization;
 
-namespace Newtonsoft.Json.Utilities
+namespace NewtonsoftMRE.Json.Utilities
 {
     internal class FSharpFunction
     {
@@ -127,8 +127,8 @@ namespace Newtonsoft.Json.Utilities
 
             // if no matching method then attempt to find with nonpublic flag
             // this is required because in WinApps some methods are private but always using NonPublic breaks medium trust
-            // https://github.com/JamesNK/Newtonsoft.Json/pull/649
-            // https://github.com/JamesNK/Newtonsoft.Json/issues/821
+            // https://github.com/JamesNK/NewtonsoftMRE.Json/pull/649
+            // https://github.com/JamesNK/NewtonsoftMRE.Json/issues/821
             if (methodInfo == null && (bindingFlags & BindingFlags.NonPublic) != BindingFlags.NonPublic)
             {
                 methodInfo = type.GetMethod(methodName, bindingFlags | BindingFlags.NonPublic);

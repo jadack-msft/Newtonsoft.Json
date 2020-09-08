@@ -26,27 +26,27 @@
 #if !(PORTABLE || DNXCORE50 || PORTABLE40) || NETSTANDARD2_0
 using System.IO;
 using System.Text;
-using Newtonsoft.Json.Bson;
-using Newtonsoft.Json.Converters;
-using Newtonsoft.Json.Linq;
+using NewtonsoftMRE.Json.Bson;
+using NewtonsoftMRE.Json.Converters;
+using NewtonsoftMRE.Json.Linq;
 using System;
 using System.Collections.Generic;
 #if DNXCORE50
 using Xunit;
 using Test = Xunit.FactAttribute;
-using Assert = Newtonsoft.Json.Tests.XUnitAssert;
+using Assert = NewtonsoftMRE.Json.Tests.XUnitAssert;
 #else
 using NUnit.Framework;
 #endif
 using System.Data;
 using System.Data.SqlTypes;
 using System.Linq;
-using Newtonsoft.Json.Tests.TestObjects;
+using NewtonsoftMRE.Json.Tests.TestObjects;
 #if !(NET20 || NET35)
 using System.Numerics;
 #endif
 
-namespace Newtonsoft.Json.Tests.Converters
+namespace NewtonsoftMRE.Json.Tests.Converters
 {
     public class DataTableConverterTests : TestFixtureBase
     {

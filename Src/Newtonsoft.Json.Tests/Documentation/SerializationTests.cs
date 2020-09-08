@@ -32,24 +32,24 @@ using System.IO;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
-using Newtonsoft.Json.Converters;
-using Newtonsoft.Json.Linq;
+using NewtonsoftMRE.Json.Converters;
+using NewtonsoftMRE.Json.Linq;
 #if DNXCORE50
 using Xunit;
 using Test = Xunit.FactAttribute;
-using Assert = Newtonsoft.Json.Tests.XUnitAssert;
+using Assert = NewtonsoftMRE.Json.Tests.XUnitAssert;
 #else
 using NUnit.Framework;
 #endif
-using Newtonsoft.Json.Serialization;
-using Newtonsoft.Json.Tests.TestObjects;
-using Newtonsoft.Json.Utilities;
+using NewtonsoftMRE.Json.Serialization;
+using NewtonsoftMRE.Json.Tests.TestObjects;
+using NewtonsoftMRE.Json.Utilities;
 using System.Globalization;
-using ErrorEventArgs = Newtonsoft.Json.Serialization.ErrorEventArgs;
+using ErrorEventArgs = NewtonsoftMRE.Json.Serialization.ErrorEventArgs;
 using OriginalStreamWriter = System.IO.StreamWriter;
-using StreamWriter = Newtonsoft.Json.Tests.Documentation.SerializationTests.StreamWriter;
+using StreamWriter = NewtonsoftMRE.Json.Tests.Documentation.SerializationTests.StreamWriter;
 
-namespace Newtonsoft.Json.Tests.Documentation
+namespace NewtonsoftMRE.Json.Tests.Documentation
 {
     [TestFixture]
     public class SerializationTests : TestFixtureBase
@@ -520,7 +520,7 @@ namespace Newtonsoft.Json.Tests.Documentation
             IPerson person = people[0];
 
             Console.WriteLine(person.GetType());
-            // Newtonsoft.Json.Tests.Employee
+            // NewtonsoftMRE.Json.Tests.Employee
 
             Console.WriteLine(person.FirstName);
             // Maurice

@@ -25,7 +25,7 @@
 
 using System.Collections.Generic;
 
-namespace Newtonsoft.Json.Tests.TestObjects
+namespace NewtonsoftMRE.Json.Tests.TestObjects
 {
     public abstract class AbstractDictionaryTestClass<TKey, TValue> : Dictionary<TKey, TValue>
     {

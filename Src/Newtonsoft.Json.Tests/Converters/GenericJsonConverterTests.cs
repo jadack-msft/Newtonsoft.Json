@@ -33,17 +33,17 @@ using System.Data.Linq;
 using System.Data.SqlTypes;
 #endif
 using System.Text;
-using Newtonsoft.Json.Converters;
+using NewtonsoftMRE.Json.Converters;
 #if DNXCORE50
 using Xunit;
 using Test = Xunit.FactAttribute;
-using Assert = Newtonsoft.Json.Tests.XUnitAssert;
+using Assert = NewtonsoftMRE.Json.Tests.XUnitAssert;
 #else
 using NUnit.Framework;
 
 #endif
 
-namespace Newtonsoft.Json.Tests.Converters
+namespace NewtonsoftMRE.Json.Tests.Converters
 {
     [TestFixture]
     public class GenericJsonConverterTests : TestFixtureBase

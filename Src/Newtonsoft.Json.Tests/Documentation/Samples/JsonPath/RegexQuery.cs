@@ -23,24 +23,24 @@
 // OTHER DEALINGS IN THE SOFTWARE.
 #endregion
 
-using Newtonsoft.Json.Linq;
+using NewtonsoftMRE.Json.Linq;
 #if DNXCORE50
 using Xunit;
 using Test = Xunit.FactAttribute;
-using Assert = Newtonsoft.Json.Tests.XUnitAssert;
+using Assert = NewtonsoftMRE.Json.Tests.XUnitAssert;
 #else
 using NUnit.Framework;
 #endif
 using System;
 using System.Collections.Generic;
 #if NET20
-using Newtonsoft.Json.Utilities.LinqBridge;
+using NewtonsoftMRE.Json.Utilities.LinqBridge;
 #else
 using System.Linq;
 #endif
 using System.Text;
 
-namespace Newtonsoft.Json.Tests.Documentation.Samples.JsonPath
+namespace NewtonsoftMRE.Json.Tests.Documentation.Samples.JsonPath
 {
     [TestFixture]
     public class RegexQuery : TestFixtureBase
@@ -51,7 +51,7 @@ namespace Newtonsoft.Json.Tests.Documentation.Samples.JsonPath
             #region Usage
             JArray packages = JArray.Parse(@"[
               {
-                'PackageId': 'Newtonsoft.Json',
+                'PackageId': 'NewtonsoftMRE.Json',
                 'Version': '11.0.1',
                 'ReleaseDate': '2018-02-17T00:00:00'
               },
@@ -69,11 +69,11 @@ namespace Newtonsoft.Json.Tests.Documentation.Samples.JsonPath
             {
                 Console.WriteLine((string) item["PackageId"]);
             }
-            // Newtonsoft.Json
+            // NewtonsoftMRE.Json
             #endregion
 
             Assert.AreEqual(1, newtonsoftPackages.Count);
-            Assert.AreEqual("Newtonsoft.Json", (string)newtonsoftPackages[0]["PackageId"]);
+            Assert.AreEqual("NewtonsoftMRE.Json", (string)newtonsoftPackages[0]["PackageId"]);
         }
     }
 }

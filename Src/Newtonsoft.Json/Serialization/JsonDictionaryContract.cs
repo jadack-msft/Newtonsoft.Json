@@ -27,14 +27,14 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Reflection;
-using Newtonsoft.Json.Utilities;
+using NewtonsoftMRE.Json.Utilities;
 using System.Collections;
 
 #if !HAVE_LINQ
-using Newtonsoft.Json.Utilities.LinqBridge;
+using NewtonsoftMRE.Json.Utilities.LinqBridge;
 #endif
 
-namespace Newtonsoft.Json.Serialization
+namespace NewtonsoftMRE.Json.Serialization
 {
     /// <summary>
     /// Contract details for a <see cref="System.Type"/> used by the <see cref="JsonSerializer"/>.
@@ -131,7 +131,7 @@ namespace Newtonsoft.Json.Serialization
                 {
                     // ConcurrentDictionary<,> + IDictionary setter + null value = error
                     // wrap to use generic setter
-                    // https://github.com/JamesNK/Newtonsoft.Json/issues/1582
+                    // https://github.com/JamesNK/NewtonsoftMRE.Json/issues/1582
                     Type typeDefinition = underlyingType.GetGenericTypeDefinition();
                     if (typeDefinition.FullName == JsonTypeReflector.ConcurrentDictionaryTypeName)
                     {

@@ -30,8 +30,8 @@ using System.Globalization;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
+using NewtonsoftMRE.Json;
+using NewtonsoftMRE.Json.Linq;
 using System.Xml;
 #if !NET20
 using System.Xml.Linq;
@@ -39,12 +39,12 @@ using System.Xml.Linq;
 #if DNXCORE50
 using Xunit;
 using Test = Xunit.FactAttribute;
-using Assert = Newtonsoft.Json.Tests.XUnitAssert;
+using Assert = NewtonsoftMRE.Json.Tests.XUnitAssert;
 #else
 using NUnit.Framework;
 #endif
 
-namespace Newtonsoft.Json.Tests.Issues
+namespace NewtonsoftMRE.Json.Tests.Issues
 {
     [TestFixture]
     public class Issue1351 : TestFixtureBase
@@ -127,7 +127,7 @@ namespace Newtonsoft.Json.Tests.Issues
                 },
                 "Error reading object reference '4'. Path '[1].Color.A', line 16, position 10.");
 
-            Assert.AreEqual("A different Id has already been assigned for value 'Newtonsoft.Json.Tests.Issues.Issue1351+Color'. This error may be caused by an object being reused multiple times during deserialization and can be fixed with the setting ObjectCreationHandling.Replace.", exception.InnerException.Message);
+            Assert.AreEqual("A different Id has already been assigned for value 'NewtonsoftMRE.Json.Tests.Issues.Issue1351+Color'. This error may be caused by an object being reused multiple times during deserialization and can be fixed with the setting ObjectCreationHandling.Replace.", exception.InnerException.Message);
         }
 
         [Test]

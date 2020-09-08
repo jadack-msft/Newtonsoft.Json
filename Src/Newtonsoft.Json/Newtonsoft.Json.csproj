@@ -22,8 +22,8 @@
     <PackageProjectUrl>https://www.newtonsoft.com/json</PackageProjectUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PublishRepositoryUrl>true</PublishRepositoryUrl> 
-    <RootNamespace>Newtonsoft.Json</RootNamespace>
-    <AssemblyName>Newtonsoft.Json</AssemblyName>
+    <RootNamespace>NewtonsoftMRE.Json</RootNamespace>
+    <AssemblyName>NewtonsoftMRE.Json</AssemblyName>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <MinClientVersion>2.12</MinClientVersion>
     <!-- including PDB files in NuGet for source link because symbolsource.org does not support portable PDBs -->

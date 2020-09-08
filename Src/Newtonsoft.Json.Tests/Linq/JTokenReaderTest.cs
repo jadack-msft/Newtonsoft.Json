@@ -29,20 +29,20 @@ using System.Text;
 #if DNXCORE50
 using Xunit;
 using Test = Xunit.FactAttribute;
-using Assert = Newtonsoft.Json.Tests.XUnitAssert;
+using Assert = NewtonsoftMRE.Json.Tests.XUnitAssert;
 #else
 using NUnit.Framework;
 #endif
-using Newtonsoft.Json;
+using NewtonsoftMRE.Json;
 using System.IO;
 #if !(NET20 || NET35 || PORTABLE40 || PORTABLE) || NETSTANDARD1_3 || NETSTANDARD2_0
 using System.Numerics;
 #endif
-using Newtonsoft.Json.Linq;
-using Newtonsoft.Json.Tests.Serialization;
-using Newtonsoft.Json.Tests.TestObjects;
+using NewtonsoftMRE.Json.Linq;
+using NewtonsoftMRE.Json.Tests.Serialization;
+using NewtonsoftMRE.Json.Tests.TestObjects;
 
-namespace Newtonsoft.Json.Tests.Linq
+namespace NewtonsoftMRE.Json.Tests.Linq
 {
     [TestFixture]
     public class JTokenReaderTest : TestFixtureBase

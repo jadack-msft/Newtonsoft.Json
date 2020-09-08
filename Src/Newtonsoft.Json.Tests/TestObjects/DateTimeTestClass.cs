@@ -30,7 +30,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 
-namespace Newtonsoft.Json.Tests.TestObjects
+namespace NewtonsoftMRE.Json.Tests.TestObjects
 {
     public class DateTimeTestClass
     {

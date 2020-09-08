@@ -28,12 +28,12 @@ using System;
 using System.Reflection;
 using Xunit;
 using Test = Xunit.FactAttribute;
-using Assert = Newtonsoft.Json.Tests.XUnitAssert;
+using Assert = NewtonsoftMRE.Json.Tests.XUnitAssert;
 #else
 using NUnit.Framework;
 #endif
 
-namespace Newtonsoft.Json.Tests.Issues
+namespace NewtonsoftMRE.Json.Tests.Issues
 {
     [TestFixture]
     public class Issue1552 : TestFixtureBase
@@ -46,7 +46,7 @@ namespace Newtonsoft.Json.Tests.Issues
 
             JsonSerializationException ex = ExceptionAssert.Throws<JsonSerializationException>(
                 () => JsonConvert.SerializeObject(c),
-                "Error getting value from 'RefField' on 'Newtonsoft.Json.Tests.Issues.RefAndRefReadonlyTestClass'.");
+                "Error getting value from 'RefField' on 'NewtonsoftMRE.Json.Tests.Issues.RefAndRefReadonlyTestClass'.");
 
             Assert.AreEqual("Could not create getter for Int32& RefField. ByRef return values are not supported.", ex.InnerException.Message);
         }
